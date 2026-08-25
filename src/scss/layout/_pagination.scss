@@ -1,0 +1,107 @@
+@use '../config/mixins' as *;
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    padding: 32px 0 0;
+    max-width: 100%;
+    list-style: none;
+    margin: 0;
+
+    &-container {
+        width: 100%;
+    }
+
+    .page-item {
+        display: flex;
+
+
+        &.disabled {
+            display: none;
+
+            .page-link {
+                opacity: 0.5;
+                pointer-events: none;
+                cursor: default;
+            }
+        }
+
+        &.active {
+            .page-link {
+                border: 1px solid #002266;
+                color: #002266;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .page-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 48px;
+        height: 48px;
+        padding: 0 12px;
+        background: white;
+        border-radius: 12px;
+        transition: all 0.2s ease;
+        border: 1px solid transparent;
+        backdrop-filter: blur(8px);
+        text-decoration: none;
+        cursor: pointer;
+        border: 1px solid var(--gray-200, #e5e7eb);
+        background-color: transparent;
+        @include font(#667085, 16px, 500);
+
+        @include devices(sm) {
+            min-width: 40px;
+            height: 40px;
+            padding: 0 8px;
+        }
+
+        &:hover {
+            border: 1px solid #002266;
+            color: #002266;
+        }
+    }
+
+    // Backwards compatibility: bare <a> children (non-Laravel markup)
+    > a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 48px;
+        height: 48px;
+        padding: 0 12px;
+        background: white;
+        border-radius: 12px;
+        transition: all 0.2s ease;
+        border: 1px solid transparent;
+        backdrop-filter: blur(8px);
+        text-decoration: none;
+
+        @include font(#667085, 16px, 500);
+
+        i {
+            font-size: 20px;
+            color: #667085;
+        }
+
+        @include devices(sm) {
+            min-width: 40px;
+            height: 40px;
+        }
+
+        &:hover {
+            border: 1px solid #002266;
+        }
+
+        &.active {
+            border: 1px solid #002266;
+        }
+    }
+}

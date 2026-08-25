@@ -1,0 +1,279 @@
+@use '../config/mixins' as *;
+
+.news {
+    position: relative;
+
+    &-section {
+        padding-bottom: 36px;
+
+        &__item {
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            color: var(--black1);
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+
+            &-img {
+                width: 100%;
+                height: 300px;
+                margin-bottom: 15px;
+                overflow: hidden;
+                border-radius: 16px;
+
+                @include devices(md) {
+                    margin-bottom: 10px;
+                }
+
+                @include devices(sm) {
+                    margin-bottom: 6px;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-position: top;
+                    transition: all 0.3s ease;
+                }
+            }
+
+            &-title {
+                margin: 0 16px 10px;
+                flex: 1;
+
+                @include devices(md) {
+                    margin: 0 8px 6px;
+
+                }
+            }
+
+
+            &-meta {
+                display: flex;
+                margin: 0 16px 0;
+                gap: 20px;
+
+                @include devices(md) {
+                    margin: 0 8px 0;
+
+                }
+
+                &-date,
+                &-views {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+
+                    p {
+                        opacity: 0.6;
+                    }
+
+                    i {
+                        font-size: 20px;
+                        color: var(--blue5);
+                    }
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+
+                .news-section__item-img {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+
+    &-page {
+        padding-bottom: 100px;
+
+
+        &__item {
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            color: var(--black1);
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+
+
+
+            &-img {
+                width: 100%;
+                height: 240px;
+                margin-bottom: 15px;
+                overflow: hidden;
+                border-radius: 16px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-position: top;
+                    transition: all 0.3s ease;
+                }
+            }
+
+            &-meta {
+                margin: 0 10px 0;
+            }
+
+            &-title {
+                margin: 0 10px 10px;
+                flex: 1;
+
+            }
+
+
+            &-meta {
+                display: flex;
+                gap: 20px;
+
+                &-date,
+                &-views {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+
+                    p {
+                        color: var(--black2);
+                        opacity: 0.6;
+                    }
+
+                    i {
+                        font-size: 20px;
+                        color: var(--blue5);
+                    }
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+
+                .news-section__item-img {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+
+    &-view {
+        position: relative;
+
+        &-title {
+            max-width: 90%;
+
+            @include devices(md) {
+                max-width: 75%;
+            }
+        }
+
+        &-share {
+            position: absolute;
+            right: 16px;
+            top: 24px;
+
+            i {
+                color: var(--blue2);
+            }
+        }
+
+        img {
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        &-img {
+            margin-bottom: 20px;
+            background-position: center center;
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            align-items: center;
+
+            .overlay {
+                filter: blur(20px);
+                position: absolute;
+                inset: 0;
+                z-index: 0;
+                width: 100%;
+                height: 100%;
+                transform: scale(1.2);
+
+                img {
+                    overflow: hidden;
+                    object-position: top;
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            img {
+                position: relative;
+                z-index: 2;
+                object-position: center;
+                object-fit: contain;
+                height: 100%;
+                aspect-ratio: 16/9;
+                width: 100%;
+            }
+        }
+
+        &-carousel {
+            &-link {
+                img {
+                    height: 200px;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        &-details {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            &-meta {
+                display: flex;
+                gap: 20px;
+
+                &-item {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 4px;
+                    color: var(--black2);
+
+                    i {
+                        color: var(--blue5);
+                    }
+                }
+
+            }
+
+
+        }
+
+        &-socials {
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+
+            a i {
+                font-size: 22px;
+                color: var(--blue2);
+            }
+        }
+    }
+}

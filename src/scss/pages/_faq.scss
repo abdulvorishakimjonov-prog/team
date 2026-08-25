@@ -1,0 +1,118 @@
+@use '../config/mixins' as *;
+
+.faq {
+
+    &-item {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 16px;
+        border-radius: 16px;
+        background-color: white;
+        border: 1px solid var(--black7);
+        width: 100%;
+        cursor: pointer;
+        box-sizing: border-box;
+        transition: all 0.4s;
+
+
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+
+        &:hover {
+            opacity: 0.9;
+        }
+
+        .question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            width: 100%;
+            transition: all 0.4s ease;
+            text-align: start;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            line-height: 28px;
+
+
+            .toggle-btn,
+            i {
+                transition: all 0.4s ease;
+                margin-bottom: auto;
+                flex: 0 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 8px;
+                font-size: 28px;
+                color: var(--blue2);
+                opacity: 1;
+                padding: 4px;
+                background: var(--black7);
+
+                &::before {
+                    transition: all 0.4s ease;
+                    z-index: 0;
+                }
+            }
+        }
+
+        hr {
+            margin: 0;
+            border-top: 0 solid white;
+            transition: all 0.4s ease;
+            width: 0;
+            border: 0;
+        }
+
+        .answer {
+            color: #080E1B;
+            text-align: start;
+            transition: all 0.4s ease;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+
+        &.active {
+            background-color: white;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            hr {
+                width: 100%;
+                opacity: 0.2;
+                border-top: 1px solid black;
+            }
+
+            .question {
+                color: black;
+                margin-bottom: 16px;
+
+
+                .toggle-btn,
+                i {
+                    background: var(--red6);
+                    color: var(--red1);
+
+                    &::before {
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+
+            .answer {
+                color: black;
+                opacity: 0.8;
+            }
+        }
+    }
+}

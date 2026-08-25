@@ -1,0 +1,174 @@
+@use '../config/mixins' as *;
+
+.footer {
+    position: relative;
+    margin-top: auto;
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--blue900);
+        z-index: -1;
+    }
+
+    &-top {
+        padding: 50px 0;
+        color: white;
+
+        .container {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1.5fr 1.5fr;
+            gap: auto;
+            justify-content: space-between;
+            gap: 20px;
+
+            @include devices(lg) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include devices(md) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        &--item {
+            @include devices(md) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            &:nth-child(2) {
+                @include devices(md) {
+                    display: none;
+                }
+            }
+
+            &-logo {
+                margin-bottom: 32px;
+
+                img {
+                    width: 100%;
+                    height: 60px;
+                    object-fit: contain;
+                }
+            }
+
+            &-form {
+                display: flex;
+                flex-direction: row;
+                gap: 16px;
+                background: transparent;
+
+                input {
+                    border: 1px solid #FFFFFF33;
+                    background: #FFFFFF1A;
+                    color: var(--black2) !important;
+                    border-radius: 12px;
+                    backdrop-filter: blur(10px);
+                    -webkit-backdrop-filter: blur(10px);
+                    -moz-backdrop-filter: blur(10px);
+                    transition: all .2s ease;
+                    will-change: backdrop-filter;
+                    background: white;
+                    border: 1px solid #FFFFFF1A;
+                    padding: 12px;
+
+                    &::placeholder {
+                        color: var(--black2) !important;
+                    }
+                }
+
+                button {
+                    padding: 10px 16px;
+                    color: var(--blue2);
+                    background: white;
+                    border-radius: 12px;
+                }
+            }
+
+            &-socials {
+                display: flex;
+                flex-direction: row;
+                gap: 12px;
+                align-items: center;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid #FFFFFF33;
+                    background: #FFFFFF1A;
+                    color: white;
+                    border-radius: 12px;
+                    backdrop-filter: blur(15px);
+                    -webkit-backdrop-filter: blur(15px);
+                    -moz-backdrop-filter: blur(15px);
+                    transition: all .2s ease;
+                    will-change: backdrop-filter;
+                    aspect-ratio: 1/1;
+                    min-width: 40px;
+                    z-index: 2;
+                    contain: layout style;
+                    isolation: isolate;
+
+                    i {
+                        font-size: 22px;
+
+                    }
+                }
+            }
+        }
+    }
+
+    &-bottom {
+        border-top: 1px solid #FFFFFF33;
+        padding: 16px;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            color: white;
+            opacity: .8;
+
+            @include devices(md) {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            &-item {
+                opacity: 0.6;
+                display: flex;
+                align-items: center;
+                gap: 4px;
+
+                @include devices(md) {
+                    width: 100%;
+                    font-size: 15px;
+                }
+
+
+            }
+
+            a {
+                text-decoration: none;
+                opacity: 1;
+                transition: opacity 0.3s ease;
+                white-space: nowrap;
+                color: white;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}

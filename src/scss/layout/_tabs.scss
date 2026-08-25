@@ -1,0 +1,59 @@
+@use '../config/mixins' as *;
+
+.tab-navigation {
+   display: flex;
+   background-color: white;
+   border-radius: 12px;
+   padding: 4px;
+   position: relative;
+   margin-bottom: 20px;
+   width: fit-content;
+   gap: 6px;
+   box-shadow: 0px 1px 2px 0px #10182855;
+
+   @include devices(md) {
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+   }
+
+   .tab-button {
+      flex: 1;
+      padding: 8px 16px;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 12px;
+      position: relative;
+      z-index: 1;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      min-width: 120px;
+
+      &.active {
+         background: var(--blue600);
+         color: white;
+         box-shadow: 0px 1px 2px 0px #1018280D;
+
+      }
+
+      &:hover {
+         background: var(var(--blue500));
+      }
+
+      &:hover:not(.active) {
+         background: var(var(--blue500));
+      }
+
+      &:focus {
+         outline-offset: 2px;
+      }
+
+      @include devices(sm) {
+         padding: 8px 6px;
+      }
+   }
+}

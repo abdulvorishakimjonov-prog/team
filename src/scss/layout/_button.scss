@@ -1,0 +1,46 @@
+.button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 24px;
+    border-radius: 12px !important;
+    color: white;
+    font-size: 16px;
+
+    i {
+        line-height: 24px;
+        font-size: 24px;
+        border: none;
+    }
+
+    &.transparent {
+        backdrop-filter: blur(15px);
+        border: 1.5px solid #FFFFFF33;
+        background: #FFFFFF1A;
+
+    }
+
+    &.blue {
+        border: 1px solid #FFFFFF33;
+        background: var(--blue2);
+    }
+
+    &.white {
+        color: var(--blue1);
+        background: white;
+    }
+}
+
+.link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    color: var(--blue1);
+    padding: 0;
+
+    i {
+        color: var(--blue1);
+
+    }
+}

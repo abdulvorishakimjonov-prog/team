@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="22"
+   height="22"
+   viewBox="0 0 22 22"
+   fill="none"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="instagram.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="36.681818"
+     inkscape:cx="11"
+     inkscape:cy="11"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3" />
+  <path
+     style="baseline-shift:baseline;display:inline;overflow:visible;vector-effect:none;fill:#ffffff;stroke-linecap:round;stroke-linejoin:round;enable-background:accumulate;stop-color:#000000;stop-opacity:1;opacity:1"
+     d="M 11,2 C 9.055455,2 7.5813054,1.9957576 6.3730469,2.1582031 5.1647883,2.3206486 4.174088,2.681387 3.4277344,3.4277344 2.681387,4.174088 2.3206486,5.1647883 2.1582031,6.3730469 1.9957576,7.5813054 2,9.055455 2,11 c 0,1.94455 -0.00424,3.418689 0.1582031,4.626953 0.1624455,1.208264 0.5231636,2.198994 1.2695313,2.945313 0.7463524,0.746358 1.7370526,1.107082 2.9453125,1.269531 C 7.5813068,20.004245 9.055455,20 11,20 c 1.94455,0 3.418688,0.0042 4.626953,-0.158203 1.208265,-0.162448 2.198996,-0.523153 2.945313,-1.269531 0.746378,-0.746317 1.107083,-1.737048 1.269531,-2.945313 C 20.004245,14.418688 20,12.94455 20,11 20,9.055455 20.004245,7.5813068 19.841797,6.3730469 19.679348,5.164787 19.318624,4.1740868 18.572266,3.4277344 17.825947,2.6813667 16.835217,2.3206486 15.626953,2.1582031 14.418689,1.9957576 12.94455,2 11,2 Z m 0,1.5 c 1.94455,0 3.387445,0.00493 4.425781,0.1445313 1.038336,0.1395995 1.624156,0.3819376 2.085938,0.8437499 0.461841,0.4618377 0.704148,1.0476075 0.84375,2.0859375 C 18.49507,7.6125488 18.5,9.055455 18.5,11 c 0,1.94455 -0.0049,3.387446 -0.144531,4.425781 -0.139602,1.038335 -0.381929,1.624155 -0.84375,2.085938 -0.461783,0.461821 -1.047603,0.704148 -2.085938,0.84375 C 14.387446,18.49507 12.94455,18.5 11,18.5 9.055455,18.5 7.6125488,18.49507 6.5742187,18.355469 5.5358887,18.215867 4.9501189,17.97356 4.4882812,17.511719 4.0264689,17.049937 3.7841308,16.464117 3.6445313,15.425781 3.5049317,14.387445 3.5,12.94455 3.5,11 3.5,9.055455 3.5049318,7.6125502 3.6445313,6.5742187 3.7841307,5.5358873 4.0264486,4.9501177 4.4882812,4.4882812 4.9501177,4.0264486 5.5358873,3.7841307 6.5742187,3.6445313 7.6125502,3.5049318 9.055455,3.5 11,3.5 Z"
+     id="path1" />
+  <path
+     style="baseline-shift:baseline;display:inline;overflow:visible;vector-effect:none;fill:#ffffff;stroke-linecap:round;stroke-linejoin:round;enable-background:accumulate;stop-color:#000000;stop-opacity:1;opacity:1"
+     d="m 11,6.5839844 c -2.4303383,0 -4.4160156,1.9856189 -4.4160156,4.4160156 0,2.430341 1.9856823,4.416016 4.4160156,4.416016 2.430333,0 4.416016,-1.985658 4.416016,-4.416016 0,-2.430414 -1.985678,-4.4160156 -4.416016,-4.4160156 z m 0,1.5 c 1.619662,0 2.916016,1.2962896 2.916016,2.9160156 0,1.619642 -1.296349,2.916016 -2.916016,2.916016 C 9.3803333,13.916016 8.0839844,12.619659 8.0839844,11 8.0839844,9.3802567 9.3803383,8.0839844 11,8.0839844 Z"
+     id="path2" />
+  <path
+     style="baseline-shift:baseline;display:inline;overflow:visible;vector-effect:none;fill:#ffffff;stroke-linecap:round;stroke-linejoin:round;enable-background:accumulate;stop-color:#000000;stop-opacity:1;opacity:1"
+     d="m 15.8125,5.2089844 c -0.531813,0 -0.978516,0.4466143 -0.978516,0.9785156 0,0.5318573 0.446742,0.9785156 0.978516,0.9785156 0.531994,0 0.978516,-0.4462633 0.978516,-0.9785156 0,-0.5322964 -0.446482,-0.9785156 -0.978516,-0.9785156 z"
+     id="path3" />
+</svg>

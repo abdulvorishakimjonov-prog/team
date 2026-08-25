@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    @@include('components/layout/head.html')
+</head>
+
+<body>
+    @@include('components/layout/header.html')
+    @@include('components/layout/menu.html')
+    @@include('components/section/hero.html')
+    @@include('components/section/news.html')
+    @@include('components/layout/footer.html')
+    <!-- <script>
+        (() => {
+            const header = document.querySelector('.header')
+            const logo = document.querySelector('.header-logo-img')
+            const threshold = 30
+            let ticking = false
+            let lastTop = null
+
+            const update = () => {
+                const isTop = window.scrollY <= threshold
+                if (isTop === lastTop) return
+                lastTop = isTop
+                header.classList.toggle('index', isTop)
+                logo.src = isTop ? '/images/logo-light.png' : '/images/logo-dark.png'
+            }
+
+            update()
+
+            window.addEventListener('scroll', () => {
+                if (ticking) return
+                ticking = true
+                requestAnimationFrame(() => {
+                    update()
+                    ticking = false
+                })
+            }, { passive: true })
+        })()
+    </script> -->
+
+
+</body>
+
+</html>

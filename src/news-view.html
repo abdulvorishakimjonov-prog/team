@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    @@include('components/layout/head.html')
+</head>
+
+<body>
+    @@include('components/layout/header.html')
+    @@include('components/layout/menu.html')
+    @@include('components/layout/breadcrumb.html')
+    <div class="layout">
+        <div class="container">
+            <div class="layout-content">
+                <div class="news-view content-section">
+                    <div class="news-view-title subtitle2 mb-3">Career Day Connects Students with Leading Companies</div>
+                    <label for="share" class="news-view-share share-link" id="share-label" style="cursor:pointer;">
+                        <script>
+                            const patchYandexButton = () => {
+                                const moreBtn = document.querySelector('.ya-share2__badge.ya-share2__badge_more');
+                                const innerLink = document.querySelector('.ya-share2__link.ya-share2__link_more.ya-share2__link_more-button-type_short');
+
+                                if (!moreBtn || !innerLink) return false;
+
+                                innerLink.style.padding = '0';
+                                moreBtn.style.cssText = 'background: white;color:var(--black1); border: 0; outline: 0;';
+                                moreBtn.innerHTML = `
+      <span class="news-view__share d-flex gap-2 align-items-center" style="color:var(--neutral700)">
+        <i class="i-share"></i><span class="d-flex align-items-center share">Share</span>
+      </span>
+    `;
+
+                                return true;
+                            };
+
+                            const startPatch = () => {
+                                if (patchYandexButton()) return;
+
+                                const observer = new MutationObserver(() => {
+                                    if (patchYandexButton()) observer.disconnect();
+                                });
+
+                                observer.observe(document.body, { childList: true, subtree: true });
+                                setTimeout(() => observer.disconnect(), 10000);
+                            };
+
+                            const script = document.createElement('script');
+                            script.src = 'https://yastatic.net/share2/share.js';
+                            script.onload = startPatch;
+                            document.head.appendChild(script);
+                        </script>
+
+
+                        <div id="share" class="ya-share2 share-link" data-lang="ru" data-curtain data-limit="0" data-lang="<?= LANG ?>" data-more-button-type="short" data-services="telegram,twitter,whatsapp,linkedin">
+                        </div>
+
+                    </label>
+
+                    <div class="news-view-img">
+                        <img src="@/images/news.jpg" alt="">
+                    </div>
+                    <div class="content-text body3 mb-3">
+                        <p>
+                            TOBB ETÜ in Tashkent continues to strengthen its position as a leading educational institution by maintaining high academic standards and innovative teaching approaches. The university focuses on providing
+                            students
+                            with a comprehensive learning experience that combines theoretical knowledge with practical application.
+                        </p>
+                        <p>
+                            Through modern curricula, experienced faculty members, and advanced facilities, students are encouraged to think critically, solve real-world problems, and develop professional competencies. The university also
+                            emphasizes research, collaboration, and continuous improvement in all academic areas.
+                        </p>
+                        <p>
+                            These efforts contribute to the growing recognition of TOBB ETÜ as a center of excellence in education, preparing graduates who are ready to succeed in both local and international environments.
+                        </p>
+                    </div>
+                    <div class="subtitle3 mb-2">
+                        Photogallery
+                    </div>
+                    <div class="news-view-carousel owl-carousel owl=theme mb-3">
+                        <a href="#" class="news-view-carousel-link">
+                            <img src="@/images/news-1.png" alt="">
+                        </a>
+                        <a href="#" class="news-view-carousel-link">
+                            <img src="@/images/news-2.jpg" alt="">
+                        </a>
+                        <a href="#" class="news-view-carousel-link">
+                            <img src="@/images/news-3.png" alt="">
+                        </a>
+                        <a href="#" class="news-view-carousel-link">
+                            <img src="@/images/news-4.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="news-view-details">
+                        <div class="news-view-details-meta">
+                            <div class="news-view-details-meta-item">
+                                <i class="i-calendar"></i>
+                                <p class="body8">12.12.2121</p>
+                            </div>
+                            <div class="news-view-details-meta-item">
+                                <i class="i-views"></i>
+                                <p class="body8">34</p>
+                            </div>
+                        </div>
+                        <div class="news-view-socials">
+                            <a href="#">
+                                <i class="i-telegram"></i>
+                            </a>
+                            <a href="#">
+                                <i class="i-instagram"></i>
+                            </a>
+                            <a href="#">
+                                <i class="i-facebook"></i>
+                            </a>
+                            <a href="#">
+                                <i class="i-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layout-sidebar">
+                @@include('components/layout/sidebar.html')
+            </div>
+        </div>
+    </div>
+    @@include('components/layout/footer.html')
+
+</body>
+
+</html>

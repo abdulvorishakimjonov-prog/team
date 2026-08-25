@@ -1,0 +1,79 @@
+<footer class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-top--item">
+                <div class="footer-top--item-logo">
+                    <img src="@/images/logo-light.png" alt="Logo">
+                </div>
+                <p class="body3 text-white">Empowering future leaders through innovation, global education, and real-world opportunities in the heart of Tashkent.</p>
+            </div>
+            <div class="footer-top--item">
+                <h5 class="body1 text-white mb-3">Quick Links</h5>
+                <a class="body3 text-white mb-2" href="#">About</a>
+                <a class="body3 text-white mb-2" href="#">Education</a>
+                <a class="body3 text-white mb-2" href="#">Campus life</a>
+                <a class="body3 text-white mb-2" href="#">News & Events</a>
+                <a class="body3 text-white mb-2" href="#">Contact</a>
+            </div>
+            <div class="footer-top--item">
+                <h5 class="body1 text-white mb-3">Contact</h5>
+                <a class="body3 text-white mb-2" href="#"> <i class="i-location"></i>25, Shahrisabz str, Mirabad district, Tashkent, 100060, Republic of Uzbekistan</a>
+                <a class="body3 text-white mb-2" href="#"> <i class="i-phone"></i>+998 (90) 915 16 19</a>
+                <a class="body3 text-white mb-2" href="#"> <i class="i-email"></i>info@tobbetu.uz</a>
+
+            </div>
+            <div class="footer-top--item">
+                <h5 class="subtitle3 text-white mb-3">Stay Updated with the Latest News</h5>
+                <p class="body3 text-white mb-3">Be the first to know about recent updates, events, and new opportunities.</p>
+                <form action="#" class="footer-top--item-form mb-3">
+                    <input type="text" class="form-control body2" placeholder="Email">
+                    <button type="submit" class="button bg-white body3">Send</button>
+                </form>
+                <div class="footer-top--item-socials">
+                    <a href="#"><i class="i-telegram"></i></a>
+                    <a href="#"><i class="i-instagram"></i></a>
+                    <a href="#"><i class="i-facebook"></i></a>
+                    <a href="#"><i class="i-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p class="footer-bottom-item">© <span id="y"></span> NPUU</p>
+            <script>y.textContent = new Date().getFullYear()</script>
+            <a href="https://proend.ru" target="_blank" class="footer-bottom-item ">
+                Sayt ishlab chiquvchisi:
+                <img src="@/images/proend.svg" width="100" alt="">
+            </a>
+        </div>
+    </div>
+</footer>
+<script src="@/assets/libs/aos/aos.js"></script>
+<script src="@/assets/libs/bootstrap/bootstrap.min.js"></script>
+<script src="@/assets/libs/flatpickr/flatpickr.min.js"></script>
+<script src="@/assets/js/jquery.min.js"></script>
+<script src="@/assets/js/imask.js"></script>
+<script src="@/assets/js/flatpickr.js"></script>
+<script src="@/assets/libs/owl-carousel/owl-carousel.js"></script>
+<script src="@/assets/js/main.js"></script>
+<script>
+    $(function () {
+        $('.example-carousel').owlCarousel({
+            loop: true,
+            autoplay: true,
+            nav: false,
+            dots: false,
+            center: true,
+            margin: 16,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                360: {
+                    items: 2
+                },
+            }
+        });
+    }); 
+</script>

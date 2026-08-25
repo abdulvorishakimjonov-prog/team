@@ -1,0 +1,44 @@
+@use '../config/mixins' as *;
+
+.contacts {
+    display: flex;
+
+    &-card {
+        background: white;
+        padding: 16px;
+        border-radius: 16px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border: 1px solid var(--black7);
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+        i {
+            font-size: 36px;
+            margin-bottom: 12px;
+            color: var(--blue2);
+        }
+
+        a i {
+            font-size: 28px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: url("../images/radial-gradient.png") no-repeat;
+            background-size: contain;
+            background-position: 100% 100%;
+            z-index: 0;
+        }
+    }
+}

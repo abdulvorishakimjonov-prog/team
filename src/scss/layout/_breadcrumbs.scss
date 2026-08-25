@@ -1,0 +1,116 @@
+@use '../config/mixins' as *;
+
+.breadcrumbs {
+    margin-top: var(--height-header);
+    background: var(--blue900);
+    color: white;
+    position: relative;
+    overflow: hidden;
+
+    @include devices(sm) {
+        background: transparent;
+    }
+
+    .container {
+        padding: 60px 16px;
+        position: relative;
+
+        @include devices(md) {
+            padding: 40px 12px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -15%;
+            right: 41%;
+            width: 125px;
+            height: 125px;
+            z-index: 1;
+            transform: rotate(-16deg);
+            background: url("../images/icon-transparent.svg");
+            background-size: contain;
+
+            @include devices(sm) {
+                content: unset;
+            }
+        }
+    }
+
+    &-wrapper {
+        max-width: 60%;
+
+        @include devices(sm) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            max-width: 100%;
+        }
+
+        .d-flex {
+            @include devices(sm) {
+                gap: 12px !important;
+                flex-wrap: wrap;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+    &-img {
+        position: absolute;
+        overflow: hidden;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 40%;
+        height: 100%;
+
+        @include devices(sm) {
+            width: 100%;
+            z-index: -1;
+            backdrop-filter: blur(10px);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 20px;
+            z-index: 1;
+            height: 100%;
+            background: var(--blue2);
+            transform: translate(20px) skew(-12deg);
+
+            @include devices(sm) {
+                width: 100%;
+                transform: none;
+                inset: 0;
+                opacity: 0.75;
+            }
+        }
+
+        img {
+            width: 100%;
+            clip-path: polygon(40px 0, 100% 0, 100% 100%, 20px 100%);
+            height: 100%;
+
+            @include devices(sm) {
+                clip-path: none;
+            }
+        }
+    }
+}
