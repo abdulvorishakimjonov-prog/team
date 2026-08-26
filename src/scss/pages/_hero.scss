@@ -108,7 +108,7 @@
 
             .h1-wrapper {
                 overflow: hidden;
-                margin-bottom: 40px;
+                margin-bottom: 30px;
             }
 
             h1 {
@@ -146,6 +146,7 @@
                 width: 16px;
                 height: 16px;
             }
+
             p {
                 color: #00A6F4;
             }
@@ -169,7 +170,7 @@
                 img {
                     width: 32px;
                     height: 32px;
-                    
+
                 }
 
                 &-text {
@@ -180,10 +181,83 @@
                     p {
                         @include font(#FFFFFF, 12px, 400);
                     }
+
                     h5 {
-                        
+
                         @include font(#FFFFFF, 16px, 500);
                     }
+                }
+            }
+        }
+    }
+
+    &-image {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 14px;
+        position: relative;
+        overflow: hidden;
+
+        background-image: url("../../images/hero-img-4.png");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+            pointer-events: none;
+        }
+
+        &__item {
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            &--side {
+                max-width: 280px;
+                transform: translateY(20px);
+                opacity: 0.9;
+            }
+
+            &--main {
+                max-width: 340px;
+                // z-index: 2;
+                transform: translateY(0);
+            }
+        }
+    }
+
+    &-carusel {
+        display: flex;
+        align-items: center;
+        padding: 20px 0;
+
+        &__item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                width: auto !important; 
+                object-fit: contain;
+                opacity: 0.6;
+                filter: grayscale(100%); 
+                transition: all 0.3s ease;
+
+                &:hover {
+                    opacity: 1;
+                    filter: grayscale(0%); 
                 }
             }
         }

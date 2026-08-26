@@ -1,0 +1,33 @@
+@use '../config/mixins' as *;
+
+.medcard {
+
+    &-section {
+
+        &-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            &-content {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                &-subtitle {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+
+                    h3 {
+                        color: #0F172A;
+                        max-width: 657px;
+                    }
+                    p {
+                        color: #475569;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -161,7 +161,7 @@
 
     --height-header: 145px;
     --width-sidebar: 300px;
-    --width-container: 1520px;
+    --width-container: 1600px;
 
     @include devices(lg) {
         --width-container: 1024px;
