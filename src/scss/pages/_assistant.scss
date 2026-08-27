@@ -1,0 +1,22 @@
+@use '../config/mixins' as *;
+
+
+.assistant {
+
+    &-section {
+
+        &-main {
+            position: relative;
+            z-index: 1;
+            background-image: url("../images/assistant-img-1.png");
+            background-repeat: no-repeat;
+
+            &-item {
+                position: absolute;
+                z-index: 2;
+
+                
+            }
+        }
+    }
+}

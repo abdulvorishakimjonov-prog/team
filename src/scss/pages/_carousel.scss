@@ -1,0 +1,104 @@
+@use '../config/mixins' as *;
+
+.carousel {
+    overflow: hidden;
+
+    &-section {
+        margin-bottom: 220px;
+
+        &-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 32px;
+
+            h3 {
+                color: #0F172A;
+            }
+        }
+
+        &-wrapper {
+            position: relative;
+
+            // Uzliksiz silliq harakat uchun muhim qism:
+            .owl-stage {
+                display: flex;
+                align-items: stretch;
+                transition-timing-function: linear !important;
+            }
+
+            .owl-stage-outer {
+                overflow: hidden; // Chekkadagi kartochkalar sig'ishi uchun
+            }
+
+            .owl-item {
+                display: flex;
+
+                >div {
+                    width: 100%;
+                }
+            }
+        }
+
+        &-card {
+            height: 200px;
+            padding: 18px 20px;
+            background: #f8fafc;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &-top {
+                >i {
+                    font-size: 30px;
+                    color: #64748b;
+                    display: block;
+                    margin-bottom: 8px;
+                }
+
+                p {
+                    margin: 0;
+                    font-size: 14px;
+                    line-height: 1.5;
+                    color: #475569;
+                }
+            }
+
+            &-bottom {
+                padding-top: 14px;
+                border-top: 1px solid #e2e8f0;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                img {
+                    width: 34px;
+                    height: 34px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                h4 {
+                    margin: 0 0 4px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: #1e293b;
+                }
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    font-size: 13px;
+                    color: #64748b;
+
+                    i {
+                        color: #fbbf24;
+                    }
+                }
+            }
+        }
+    }
+}

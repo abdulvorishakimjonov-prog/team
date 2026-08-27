@@ -1,0 +1,138 @@
+@use '../config/mixins' as *;
+
+
+.health {
+    margin-bottom: 220px;
+    padding: 124px 0 0;
+
+    background-image:
+        linear-gradient(180deg,
+            #FFFFFF 0%,
+            rgba(255, 255, 255, 0) 20%),
+        linear-gradient(0deg,
+            #FFFFFF 0%,
+            rgba(255, 255, 255, 0) 20%),
+        url("../../images/he.png");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%, 100% 100%, cover;
+
+
+    &-main {
+        display: flex;
+        justify-content: space-between;
+
+        &-left {
+            display: flex;
+            flex-direction: column;
+            margin-top: 40px;
+
+            &-title {
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                max-width: 711px;
+                margin-bottom: 42px;
+
+                h3 {
+                    color: #0F172A;
+                }
+
+                p {
+                    color: #475569;
+                    max-width: 632px;
+                }
+            }
+
+            &-item {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                margin-bottom: 46px;
+
+                &-store {
+                    width: 100%;
+                    max-width: 190px;
+                    display: flex;
+                    align-items: center;
+                    background: #1E293B;
+                    border-radius: 12px;
+                    padding: 8px 12px;
+                    gap: 8px;
+
+                    img {
+                        width: 32px;
+                        height: 32px;
+                        object-fit: cover;
+                    }
+
+                    &-text {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        color: white;
+                    }
+                }
+            }
+
+            &-qr {
+                width: fit-content;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                background: #FFFFFF;
+                border-radius: 24px;
+                padding: 12px;
+
+                img {
+                    width: 137px;
+                    height: 137px;
+                    object-fit: cover;
+                }
+
+                &-text {
+                    max-width: 203px;
+                    background: var(--slate-50, #F8FAFC);
+                    border: 1px solid var(--slate-100, #F1F5F9);
+                    border-radius: 12px;
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 9px;
+
+                    h5 {
+                        color: #475569;
+
+                    }
+
+                    p {
+                        color: #475569;
+                        max-width: 169px;
+                    }
+                }
+            }
+        }
+
+        &-right {
+            display: flex;
+            gap: 23px;
+            position: relative;
+            overflow: hidden;
+            align-items: flex-end;
+
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 45%;
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+                pointer-events: none;
+            }
+
+        }
+    }
+}

@@ -3,9 +3,11 @@
 .medcard {
 
     &-section {
+        margin-bottom: 220px;
 
         &-item {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             align-items: center;
             gap: 16px;
 
@@ -23,8 +25,93 @@
                         color: #0F172A;
                         max-width: 657px;
                     }
+
                     p {
                         color: #475569;
+                    }
+                }
+
+                &-wrapper {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 16px;
+
+                    &-card {
+                        border-radius: 24px;
+                        background: #F0F9FF;
+                        padding: 20px;
+                        height: 224px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        &-image {
+                            width: 54px;
+                            height: 54px;
+                            border-radius: 50%;
+                            background-color: #DFF2FE;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            img {
+                                width: 32px;
+                                height: 32px;
+                            }
+                        }
+
+                        &-text {
+                            h5 {
+                                color: #0F172A;
+                                font-size: 20px;
+                                font-weight: 600;
+                                margin: 0 0 8px 0;
+                            }
+
+                            p {
+                                color: #64754B;
+                                font-size: 15px;
+                                font-weight: 400;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-image {
+                position: relative;
+                z-index: 1;
+                width: 100%;
+                border-radius: 24px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+
+                &-bg {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                }
+
+                &-phone {
+                    position: absolute;
+                    z-index: 2;
+                    top: 124px;
+                    // left: 50%;
+                    transform: translateX(-50%);
+                    width: 80%;
+                    display: flex;
+                    justify-content: center;
+
+                    img {
+                        width: 100%;
+                        max-width: 380px;
+                        height: auto;
+                        display: block;
+                        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+                        -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
                     }
                 }
             }

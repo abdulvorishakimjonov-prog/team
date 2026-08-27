@@ -1,15 +1,27 @@
 @use '../config/mixins' as *;
 
 .faq {
+    margin: 0 auto;
+    margin-bottom: 90px;
+
+    &-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 32px;
+    }
 
     &-item {
+        max-width: 1062px;
         display: flex;
         align-items: center;
         flex-direction: column;
-        padding: 16px;
-        border-radius: 16px;
+        padding: 20px 18px 20px 20px;
+        border-radius: 24px;
         background-color: white;
-        border: 1px solid var(--black7);
+        background: #F8FAFC;
+        border: 1px solid var(--slate-100, #F1F5F9);
         width: 100%;
         cursor: pointer;
         box-sizing: border-box;
@@ -30,6 +42,7 @@
             align-items: center;
             gap: 12px;
             width: 100%;
+
             transition: all 0.4s ease;
             text-align: start;
             margin-bottom: 0;
@@ -47,7 +60,7 @@
                 align-items: center;
                 border-radius: 8px;
                 font-size: 28px;
-                color: var(--blue2);
+                color: #334155;
                 opacity: 1;
                 padding: 4px;
                 background: var(--black7);
@@ -81,7 +94,7 @@
 
 
         &.active {
-            background-color: white;
+            background-color: #F8FAFC;
 
             &:hover {
                 opacity: 1;
@@ -104,7 +117,7 @@
                     color: var(--red1);
 
                     &::before {
-                        transform: rotate(-45deg);
+                        transform: rotate(-185deg);
                     }
                 }
             }

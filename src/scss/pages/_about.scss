@@ -22,14 +22,13 @@
 
         &-main {
             display: grid;
-            grid-template-columns: 523px 1fr; // Chap va o'ng tomon nisbati
+            grid-template-columns: 523px 1fr; 
             gap: 16px;
 
             @media (max-width: 992px) {
                 grid-template-columns: 1fr;
             }
 
-            // Chap tarafdagi baland karta
             &-left {
                 background: #F1F5F9;
                 border-radius: 32px;

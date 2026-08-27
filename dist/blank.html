@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="./assets/libs/owl-carousel/owl-carousel.css">
 <link rel="stylesheet" href="./assets/libs/owl-carousel/owl-theme.css">
 <link rel="stylesheet" href="./css/main.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <title> TOBB ETU </title>
 </head>
 
@@ -223,7 +224,8 @@
                 <div class="footer-top--item-logo">
                     <img src="./images/logo-light.png" alt="Logo">
                 </div>
-                <p class="body3 text-white">Empowering future leaders through innovation, global education, and real-world opportunities in the heart of Tashkent.</p>
+                <p class="body3 text-white">Empowering future leaders through innovation, global education, and
+                    real-world opportunities in the heart of Tashkent.</p>
             </div>
             <div class="footer-top--item">
                 <h5 class="body1 text-white mb-3">Quick Links</h5>
@@ -235,14 +237,16 @@
             </div>
             <div class="footer-top--item">
                 <h5 class="body1 text-white mb-3">Contact</h5>
-                <a class="body3 text-white mb-2" href="#"> <i class="i-location"></i>25, Shahrisabz str, Mirabad district, Tashkent, 100060, Republic of Uzbekistan</a>
+                <a class="body3 text-white mb-2" href="#"> <i class="i-location"></i>25, Shahrisabz str, Mirabad
+                    district, Tashkent, 100060, Republic of Uzbekistan</a>
                 <a class="body3 text-white mb-2" href="#"> <i class="i-phone"></i>+998 (90) 915 16 19</a>
                 <a class="body3 text-white mb-2" href="#"> <i class="i-email"></i>info@tobbetu.uz</a>
 
             </div>
             <div class="footer-top--item">
                 <h5 class="subtitle3 text-white mb-3">Stay Updated with the Latest News</h5>
-                <p class="body3 text-white mb-3">Be the first to know about recent updates, events, and new opportunities.</p>
+                <p class="body3 text-white mb-3">Be the first to know about recent updates, events, and new
+                    opportunities.</p>
                 <form action="#" class="footer-top--item-form mb-3">
                     <input type="text" class="form-control body2" placeholder="Email">
                     <button type="submit" class="button bg-white body3">Send</button>
@@ -275,6 +279,7 @@
 <script src="./assets/js/flatpickr.js"></script>
 <script src="./assets/libs/owl-carousel/owl-carousel.js"></script>
 <script src="./assets/js/main.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     $(function () {
         $('.example-carousel').owlCarousel({
@@ -293,7 +298,27 @@
                 },
             }
         });
-    }); 
+    });
+
+    $('.carousel-section-wrapper').owlCarousel({
+        loop: true,
+        margin: 12,
+        nav: false,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 0,          // Kutish vaqtini 0 ga tushiramiz
+        autoplaySpeed: 5000,         // Harakat tezligi (ms)
+        smartSpeed: 5000,            // O'tish tezligi
+        autoplayHoverPause: false,   // Sichqoncha olib borilganda to'xtamaydi
+        slideTransition: 'linear',   // Bir maromda siljishi uchun
+
+        responsive: {
+            0: { items: 1 },
+            576: { items: 2 },
+            992: { items: 3 },
+            1200: { items: 4 }
+        }
+    });
 </script>
 
 </body>
