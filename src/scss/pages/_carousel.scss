@@ -18,84 +18,92 @@
             }
         }
 
-        &-wrapper {
+        &-slider {
             position: relative;
 
-            // Uzliksiz silliq harakat uchun muhim qism:
             .owl-stage {
                 display: flex;
                 align-items: stretch;
                 transition-timing-function: linear !important;
             }
 
+            &:hover .owl-stage {
+                transition-property: none !important;
+            }
+
             .owl-stage-outer {
-                overflow: hidden; // Chekkadagi kartochkalar sig'ishi uchun
+                overflow: hidden;
             }
 
             .owl-item {
                 display: flex;
-
-                >div {
-                    width: 100%;
-                }
             }
         }
 
         &-card {
-            height: 200px;
-            padding: 18px 20px;
-            background: #f8fafc;
-            border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            padding: 20px;
+            background: #F1F5F9;
+            border-radius: 24px;
 
             &-top {
-                >i {
-                    font-size: 30px;
-                    color: #64748b;
-                    display: block;
-                    margin-bottom: 8px;
+                margin-bottom: 106px;
+
+                img {
+                    width: 35px;
+                    height: 31px;
+                    object-fit: contain;
+                    margin-bottom: 22px;
                 }
 
                 p {
-                    margin: 0;
-                    font-size: 14px;
-                    line-height: 1.5;
-                    color: #475569;
+                    color: #334155;
                 }
             }
 
+            &-line {
+                width: 100%;
+                height: .5px;
+                background: #E2E8F0;
+                margin-bottom: 12px;
+            }
+
             &-bottom {
-                padding-top: 14px;
-                border-top: 1px solid #e2e8f0;
                 display: flex;
                 align-items: center;
-                gap: 10px;
+                gap: 11px;
 
                 img {
-                    width: 34px;
-                    height: 34px;
-                    border-radius: 50%;
-                    object-fit: cover;
+                    width: 48px;
+                    height: 48px;
+                    object-fit: contain;
                 }
 
-                h4 {
-                    margin: 0 0 4px;
-                    font-size: 14px;
-                    font-weight: 600;
-                    color: #1e293b;
-                }
-
-                span {
+                &-text {
                     display: flex;
-                    align-items: center;
+                    flex-direction: column;
                     gap: 4px;
-                    font-size: 13px;
-                    color: #64748b;
 
-                    i {
-                        color: #fbbf24;
+                    h4 {
+                        color: #000000;
+                    }
+
+                    p {
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                        color: #64748B;
+
+                        span {
+                            display: flex;
+                            align-items: center;
+                            gap: 6px;
+                            color: #334155;
+
+                            i {
+                                font-size: 16px;
+                                color: #EFB100;
+                            }
+                        }
                     }
                 }
             }
