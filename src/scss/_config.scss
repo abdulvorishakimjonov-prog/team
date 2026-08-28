@@ -94,7 +94,7 @@ select,
         margin: 0;
     }
 
-    &[type=number] {
+    &[type="number"] {
         -moz-appearance: textfield;
         appearance: textfield;
     }
@@ -154,6 +154,8 @@ i {
 
 .select-wrapper {
     position: relative;
+
+
 
     select {
         -webkit-appearance: none;

@@ -35,7 +35,7 @@
                 <a href="#" class="body5">FAQ</a>
             </div>
             <div class="header-main-download">
-                <a href="#" class="button1">Yuklab olish <i></i></a>
+                <a href="#" class="button1">Yuklab olish <i class="i-dowland"></i></a>
             </div>
         </div>
     </div>
@@ -351,41 +351,45 @@
         <div class="container">
             <div class="footer-top--item">
                 <div class="footer-top--item-logo">
-                    <img src="./images/logo-light.png" alt="Logo">
+                    <img src="./images/logo.svg" alt="Logo">
+                    <p class="body2">O'zbekistondagi birinchi to'liq tibbiy boshqaruv platformasi. Sog'lig'ingizni aqlli
+                        boshqaring.</p>
+                    <div class="footer-top--item-logo-icon">
+                        <a href="#"><i class="i-teligram"></i></a>
+                        <a href="#"><i class="i-instagram"></i></a>
+                        <a href="#"><i class="i-facebook"></i></a>
+                        <a href="#"><i class="i-watsap"></i></a>
+                    </div>
                 </div>
-                <p class="body3 text-white">Empowering future leaders through innovation, global education, and
-                    real-world opportunities in the heart of Tashkent.</p>
-            </div>
-            <div class="footer-top--item">
-                <h5 class="body1 text-white mb-3">Quick Links</h5>
-                <a class="body3 text-white mb-2" href="#">About</a>
-                <a class="body3 text-white mb-2" href="#">Education</a>
-                <a class="body3 text-white mb-2" href="#">Campus life</a>
-                <a class="body3 text-white mb-2" href="#">News & Events</a>
-                <a class="body3 text-white mb-2" href="#">Contact</a>
-            </div>
-            <div class="footer-top--item">
-                <h5 class="body1 text-white mb-3">Contact</h5>
-                <a class="body3 text-white mb-2" href="#"> <i class="i-location"></i>25, Shahrisabz str, Mirabad
-                    district, Tashkent, 100060, Republic of Uzbekistan</a>
-                <a class="body3 text-white mb-2" href="#"> <i class="i-phone"></i>+998 (90) 915 16 19</a>
-                <a class="body3 text-white mb-2" href="#"> <i class="i-email"></i>info@tobbetu.uz</a>
 
-            </div>
-            <div class="footer-top--item">
-                <h5 class="subtitle3 text-white mb-3">Stay Updated with the Latest News</h5>
-                <p class="body3 text-white mb-3">Be the first to know about recent updates, events, and new
-                    opportunities.</p>
-                <form action="#" class="footer-top--item-form mb-3">
-                    <input type="text" class="form-control body2" placeholder="Email">
-                    <button type="submit" class="button bg-white body3">Send</button>
-                </form>
-                <div class="footer-top--item-socials">
-                    <a href="#"><i class="i-telegram"></i></a>
-                    <a href="#"><i class="i-instagram"></i></a>
-                    <a href="#"><i class="i-facebook"></i></a>
-                    <a href="#"><i class="i-youtube"></i></a>
+                <div class="footer-top--item-content">
+                    <div class="footer-top--item-content-link">
+                        <p class="body1">Platforma</p>
+                        <a href="#" class="body2">Imkoniyatlar</a>
+                        <a href="#" class="body2">Shifokorlar</a>
+                        <a href="#" class="body2">Klinikalar</a>
+                        <a href="#" class="body2">MedPro Ai</a>
+                    </div>
+                    <div class="footer-top--item-content-link">
+                        <p class="body1">Platforma</p>
+                        <a href="#" class="body2">Biz haqimizda</a>
+                        <a href="#" class="body2">Blog</a>
+                        <a href="#" class="body2">Yangliklar</a>
+                        <a href="#" class="body2">Hamkorlik</a>
+                        <a href="#" class="body2">Ish o’rinlari</a>
+                    </div>
+                    <div class="footer-top--item-content-link">
+                        <p class="body1">Platforma</p>
+                        <a href="#" class="body2">Faq</a>
+                        <a href="#" class="body2">Aloqa</a>
+                        <a href="#" class="body2">Maxfiylik siyosati</a>
+                        <a href="#" class="body2">Foydalanish shartlari</a>
+                        <a href="#" class="body2">Cookie siyosati</a>
+                    </div>
                 </div>
+            </div>
+            <div class="footer-top-image">
+                <img src="./images/footer-img-2.png" alt="">
             </div>
         </div>
     </div>
@@ -401,30 +405,33 @@
     </div>
 </footer>
 <script src="./assets/libs/aos/aos.js"></script>
-<script src="./assets/libs/bootstrap/bootstrap.min.js"></script>
-<script src="./assets/libs/flatpickr/flatpickr.min.js"></script>
+<!-- <script src="./assets/libs/bootstrap/bootstrap.min.js"></script> -->
+<!-- <script src="./assets/libs/flatpickr/flatpickr.min.js"></script> -->
 <script src="./assets/js/jquery.min.js"></script>
 <script src="./assets/js/imask.js"></script>
-<script src="./assets/js/flatpickr.js"></script>
+<!-- <script src="./assets/js/flatpickr.js"></script> -->
 <script src="./assets/libs/owl-carousel/owl-carousel.js"></script>
 <script src="./assets/js/main.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     $(function () {
-        $('.example-carousel').owlCarousel({
+        $('.hero-carousel').owlCarousel({
             loop: true,
             autoplay: true,
+            autoplaySpeed: 6000,
+            smartSpeed: 6000,
+            autoplayHoverPause: true,
+            slideTransition: 'linear',
             nav: false,
             dots: false,
-            center: true,
-            margin: 16,
+            margin: 84, 
+
             responsive: {
-                0: {
-                    items: 1
-                },
-                360: {
-                    items: 2
-                },
+                0: { items: 2 },
+                480: { items: 3 },
+                768: { items: 4 },
+                992: { items: 6 },
+                1200: { items: 8 } 
             }
         });
     });
@@ -435,8 +442,7 @@
         nav: false,
         dots: false,
         autoplay: true,
-        // autoplayTimeout: ,
-        autoplaySpeed: 6000,
+         autoplaySpeed: 6000,
         smartSpeed: 6000,
         autoplayHoverPause: true,
         slideTransition: 'linear',

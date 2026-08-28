@@ -23,6 +23,9 @@ export const path = {
         assets: `${srcFolder}/assets/**/*.*`,
         images: `${srcFolder}/images/*.*`
     },
+    lint: {
+        scss: `${srcFolder}/scss/**/*.scss`
+    },
     clean: buildFolder,
     srcFolder: srcFolder,
     rootFolder: rootFolder,

@@ -6,6 +6,7 @@
     overflow: hidden;
     margin: 10px;
     border-radius: 24px;
+    margin-bottom: 160px;
 
     .container {
         display: flex;
@@ -15,7 +16,6 @@
         text-align: center;
         min-height: 100svh;
         padding-top: calc(var(--height-header) + 32px);
-        padding-bottom: 64px;
         gap: 40px;
         position: relative;
         z-index: 1;
@@ -101,14 +101,13 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            gap: 16px;
             max-width: 700px;
 
             color: white;
 
             .h1-wrapper {
                 overflow: hidden;
-                margin-bottom: 30px;
+                margin-bottom: 46px;
             }
 
             h1 {
@@ -141,6 +140,7 @@
             background: #FFFFFF;
             border-radius: 136px;
             padding: 10px;
+            margin-bottom: 8px;
 
             img {
                 width: 16px;
@@ -156,12 +156,13 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            margin-bottom: 10px;
 
             &-store {
                 background: #1E293B;
                 border-radius: 12px;
-                max-width: 180px;
-                width: 100%;
+                width: 180px;
+                height: 54px;
                 display: flex;
                 align-items: center;
                 padding: 8px 8px;
@@ -179,12 +180,11 @@
                     align-items: flex-start;
 
                     p {
-                        @include font(#FFFFFF, 12px, 400);
+                        color: white;
                     }
 
                     h5 {
-
-                        @include font(#FFFFFF, 16px, 500);
+                        color: white;
                     }
                 }
             }
@@ -199,7 +199,7 @@
         position: relative;
         overflow: hidden;
 
-        background-image: url("../../images/hero-img-4.png");
+        background-image: url("../images/hero-img-4.png");
         background-repeat: no-repeat;
         background-position: center bottom;
 
@@ -228,40 +228,37 @@
             }
 
             &--main {
-                max-width: 340px;
+                max-width: 340px;           
                 // z-index: 2;
                 transform: translateY(0);
             }
         }
     }
 
-    // &-carusel {
-    //     display: flex;
-    //     align-items: center;
-    //     padding: 20px 0;
+    &-carousel {
 
-    //     &__item {
-    //         display: flex;
-    //         align-items: center;
-    //         justify-content: center;
-    //         height: 50px;
+        .owl-stage {
+            display: flex;
+            align-items: center;
+        }
 
-    //         img {
-    //             max-width: 100%;
-    //             max-height: 100%;
-    //             width: auto !important; 
-    //             object-fit: contain;
-    //             opacity: 0.6;
-    //             filter: grayscale(100%); 
-    //             transition: all 0.3s ease;
+        &__item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 38px;
 
-    //             &:hover {
-    //                 opacity: 1;
-    //                 filter: grayscale(0%); 
-    //             }
-    //         }
-    //     }
-    // }
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                width: auto !important; 
+                object-fit: contain;
+                opacity: 0.5;
+                transition: opacity 0.3s ease, filter 0.3s ease;
+
+            }
+        }
+    }
 
     &__socials {
         display: flex;

@@ -11,6 +11,10 @@
             align-items: center;
             gap: 16px;
 
+            @include devices(lg) {
+                grid-template-columns: 1fr;
+            }
+
             &-content {
                 display: flex;
                 flex-direction: column;

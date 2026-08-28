@@ -12,21 +12,70 @@
         linear-gradient(0deg,
             #FFFFFF 0%,
             rgba(255, 255, 255, 0) 20%),
-        url("../../images/he.png");
+        url("../images/he.png");
 
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%, 100% 100%, cover;
 
+    @include devices(lg) {
+        margin-bottom: 160px;
+        padding: 100px 0 0;
+    }
+
+    @include devices(md) {
+        margin-bottom: 100px;
+        padding: 80px 0 0;
+        background-size: 100% 100%, 100% 100%, auto 100%;
+    }
+
+    @include devices(sm) {
+        margin-bottom: 70px;
+        padding: 60px 0 0;
+        background-size: 100% 100%, 100% 100%, auto 100%;
+    }
+
 
     &-main {
         display: flex;
         justify-content: space-between;
+        gap: 30px;
+
+        @include devices(lg) {
+            gap: 20px;
+        }
+
+        @include devices(md) {
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        @include devices(sm) {
+            gap: 30px;
+        }
+
 
         &-left {
             display: flex;
             flex-direction: column;
             margin-top: 40px;
+
+            @include devices(lg) {
+                margin-top: 30px;
+            }
+
+            @include devices(md) {
+                width: 100%;
+                margin-top: 0;
+                align-items: center;
+                text-align: center;
+            }
+
+            @include devices(sm) {
+                margin-top: 0;
+            }
+
 
             &-title {
                 display: flex;
@@ -35,21 +84,77 @@
                 max-width: 711px;
                 margin-bottom: 42px;
 
+                @include devices(lg) {
+                    max-width: 600px;
+                    margin-bottom: 32px;
+                }
+
+                @include devices(md) {
+                    max-width: 650px;
+                    margin-bottom: 26px;
+                    align-items: center;
+                }
+
+                @include devices(sm) {
+                    max-width: 100%;
+                    margin-bottom: 20px;
+                }
+
+
                 h3 {
                     color: #0F172A;
+
+                    @include devices(lg) {
+                        font-size: 32px;
+                    }
+
+                    @include devices(md) {
+                        font-size: 28px;
+                    }
+
+                    @include devices(sm) {
+                        font-size: 24px;
+                    }
                 }
 
                 p {
                     color: #475569;
                     max-width: 632px;
+
+                    @include devices(md) {
+                        max-width: 600px;
+                    }
+
+                    @include devices(sm) {
+                        max-width: 100%;
+                        font-size: 14px;
+                    }
                 }
             }
+
 
             &-item {
                 display: flex;
                 align-items: center;
                 gap: 16px;
                 margin-bottom: 46px;
+
+                @include devices(lg) {
+                    gap: 12px;
+                    margin-bottom: 35px;
+                }
+
+                @include devices(md) {
+                    justify-content: center;
+                    margin-bottom: 28px;
+                }
+
+                @include devices(sm) {
+                    gap: 8px;
+                    margin-bottom: 22px;
+                    width: 100%;
+                }
+
 
                 &-store {
                     width: 100%;
@@ -61,10 +166,27 @@
                     padding: 8px 12px;
                     gap: 8px;
 
+                    @include devices(md) {
+                        max-width: 180px;
+                    }
+
+                    @include devices(sm) {
+                        max-width: 150px;
+                        padding: 6px 8px;
+                        gap: 6px;
+                        border-radius: 10px;
+                    }
+
+
                     img {
                         width: 32px;
                         height: 32px;
                         object-fit: cover;
+
+                        @include devices(sm) {
+                            width: 26px;
+                            height: 26px;
+                        }
                     }
 
                     &-text {
@@ -72,9 +194,14 @@
                         flex-direction: column;
                         align-items: flex-start;
                         color: white;
+
+                        @include devices(sm) {
+                            font-size: 11px;
+                        }
                     }
                 }
             }
+
 
             &-qr {
                 width: fit-content;
@@ -85,11 +212,35 @@
                 border-radius: 24px;
                 padding: 12px;
 
+                @include devices(md) {
+                    gap: 10px;
+                    padding: 10px;
+                    border-radius: 20px;
+                }
+
+                @include devices(sm) {
+                    gap: 8px;
+                    padding: 8px;
+                    border-radius: 16px;
+                }
+
+
                 img {
                     width: 137px;
                     height: 137px;
                     object-fit: cover;
+
+                    @include devices(md) {
+                        width: 115px;
+                        height: 115px;
+                    }
+
+                    @include devices(sm) {
+                        width: 90px;
+                        height: 90px;
+                    }
                 }
+
 
                 &-text {
                     max-width: 203px;
@@ -101,18 +252,41 @@
                     flex-direction: column;
                     gap: 9px;
 
+                    @include devices(md) {
+                        max-width: 190px;
+                        padding: 8px;
+                        gap: 6px;
+                    }
+
+                    @include devices(sm) {
+                        max-width: 150px;
+                        padding: 7px;
+                        gap: 5px;
+                        border-radius: 10px;
+                    }
+
+
                     h5 {
                         color: #475569;
 
+                        @include devices(sm) {
+                            font-size: 13px;
+                        }
                     }
 
                     p {
                         color: #475569;
                         max-width: 169px;
+
+                        @include devices(sm) {
+                            max-width: 100%;
+                            font-size: 11px;
+                        }
                     }
                 }
             }
         }
+
 
         &-right {
             display: flex;
@@ -120,6 +294,20 @@
             position: relative;
             overflow: hidden;
             align-items: flex-end;
+
+            @include devices(lg) {
+                gap: 16px;
+            }
+
+            @include devices(md) {
+                width: 100%;
+                justify-content: center;
+                gap: 14px;
+            }
+
+            @include devices(sm) {
+                gap: 8px;
+            }
 
 
             &::after {
@@ -129,10 +317,29 @@
                 right: 0;
                 bottom: 0;
                 height: 45%;
-                background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+                background: linear-gradient(180deg,
+                        rgba(255, 255, 255, 0) 0%,
+                        #FFFFFF 100%);
                 pointer-events: none;
+
+                @include devices(sm) {
+                    height: 35%;
+                }
             }
 
+
+            img {
+                max-width: 100%;
+                height: auto;
+
+                @include devices(md) {
+                    max-width: 45%;
+                }
+
+                @include devices(sm) {
+                    max-width: 48%;
+                }
+            }
         }
     }
 }
