@@ -197,10 +197,8 @@
                 button.addEventListener('click', function (e) {
                     e.preventDefault();
 
-                    // Toggle current item
                     item.classList.toggle('open');
 
-                    // Close other dropdowns
                     dropdownItems.forEach(otherItem => {
                         if (otherItem !== item) {
                             otherItem.classList.remove('open');
@@ -210,7 +208,7 @@
             }
         });
     });
-</script>
+</script>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
             </div>
 
         </div>
@@ -284,8 +282,8 @@
 <script src="./assets/libs/owl-carousel/owl-carousel.js"></script>
 <script src="./assets/js/main.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    $(function () {
+<script>                                         
+    $(function () {                            
         $('.hero-carousel').owlCarousel({
             loop: true,
             autoplay: true,
