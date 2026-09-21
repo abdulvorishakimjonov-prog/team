@@ -2,44 +2,16 @@
 
 
 .health {
-    margin-bottom: 220px;
-    padding: 124px 0 0;
-
-    background-image:
-        linear-gradient(180deg,
-            #FFFFFF 0%,
-            rgba(255, 255, 255, 0) 20%),
-        linear-gradient(0deg,
-            #FFFFFF 0%,
-            rgba(255, 255, 255, 0) 20%),
-        url("../images/he.png");
-
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%, 100% 100%, cover;
-
-    @include devices(lg) {
-        margin-bottom: 160px;
-        padding: 100px 0 0;
-    }
-
-    @include devices(md) {
-        margin-bottom: 100px;
-        padding: 80px 0 0;
-        background-size: 100% 100%, 100% 100%, auto 100%;
-    }
-
-    @include devices(sm) {
-        margin-bottom: 70px;
-        padding: 60px 0 0;
-        background-size: 100% 100%, 100% 100%, auto 100%;
-    }
-
 
     &-main {
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
         gap: 30px;
+        max-height: 556px;
+        position: relative;
+        border-radius: 32px;
+        background: linear-gradient(180deg, #338CFF 0%, #4EB0FF 100%);
 
         @include devices(lg) {
             gap: 20px;
@@ -59,7 +31,7 @@
         &-left {
             display: flex;
             flex-direction: column;
-            margin-top: 40px;
+            padding: 55px 0 55px 55px;
 
             @include devices(lg) {
                 margin-top: 30px;
@@ -83,6 +55,7 @@
                 gap: 6px;
                 max-width: 711px;
                 margin-bottom: 42px;
+                color: white;
 
                 @include devices(lg) {
                     max-width: 600px;
@@ -101,24 +74,8 @@
                 }
 
 
-                h3 {
-                    color: #0F172A;
-
-                    @include devices(lg) {
-                        font-size: 32px;
-                    }
-
-                    @include devices(md) {
-                        font-size: 28px;
-                    }
-
-                    @include devices(sm) {
-                        font-size: 24px;
-                    }
-                }
 
                 p {
-                    color: #475569;
                     max-width: 632px;
 
                     @include devices(md) {
@@ -127,7 +84,6 @@
 
                     @include devices(sm) {
                         max-width: 100%;
-                        font-size: 14px;
                     }
                 }
             }
@@ -161,7 +117,7 @@
                     max-width: 190px;
                     display: flex;
                     align-items: center;
-                    background: #1E293B;
+                    background: white;
                     border-radius: 12px;
                     padding: 8px 12px;
                     gap: 8px;
@@ -193,7 +149,7 @@
                         display: flex;
                         flex-direction: column;
                         align-items: flex-start;
-                        color: white;
+                        color: #0F172A;
 
                         @include devices(sm) {
                             font-size: 11px;
@@ -294,6 +250,8 @@
             position: relative;
             overflow: hidden;
             align-items: flex-end;
+            z-index: 2;
+            padding: 0 32px 0;
 
             @include devices(lg) {
                 gap: 16px;
@@ -317,10 +275,9 @@
                 right: 0;
                 bottom: 0;
                 height: 45%;
-                background: linear-gradient(180deg,
-                        rgba(255, 255, 255, 0) 0%,
-                        #FFFFFF 100%);
+                background: linear-gradient(180deg, rgba(74, 170, 255, 0) 0%, #4EB0FF 100%);
                 pointer-events: none;
+                border-radius: 32px;
 
                 @include devices(sm) {
                     height: 35%;
