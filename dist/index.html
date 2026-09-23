@@ -21,24 +21,31 @@
 
 <body>
     <header class="header">
-    <div class="container">
-        <div class="header-main">
-            <div class="header-main-logo">
-                <img src="./images/logo.svg" alt="">
-            </div>
-            <div class="header-main-content">
-                <a href="#" class="active body5">Bosh sahifa</a>
-                <a href="#" class="body5">Imkoniyatlar</a>
-                <a href="#" class="body5">Shifokorlar</a>
-                <a href="#" class="body5">Klinikalar</a>
-                <a href="#" class="body5">MedPro AI</a>
-                <a href="#" class="body5">FAQ</a>
-            </div>
-            <div class="header-main-download">
-                <a href="#" class="button1">Yuklab olish <i class="i-dowland"></i></a>
-            </div>
+  <div class="container">
+    <div class="header-main">
+      <div class="header-main-logo">
+        <div class="header-main-logo-image">
+          <img src="./images/logo.svg" alt="">
         </div>
+        <div class="header-main-logo-text">
+          <img src="./images/header-logo.svg" alt="">
+          <p>HUQUQLARINGIZ HIMOYASI DOIM SIZ BILAN</p>
+        </div>
+      </div>
+      <div class="header-main-content">
+        <a href="#about" class="active body5">Bosh sahifa</a>
+        <a href="#" class="body5">Imkoniyatlar</a>
+        <a href="#" class="body5">Advokatlar</a>
+        <a href="#" class="body5">Tashkilotlar</a>
+        <a href="#" class="body5">Lawo AI</a>
+        <a href="#" class="body5">Obunalar</a>
+        <a href="#" class="body5">FAQ</a>
+      </div>
+      <div class="header-main-download">
+        <a href="#" class="button1">Yuklab olish <i class="i-dowland"></i></a>
+      </div>
     </div>
+  </div>
 </header>
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
     <div class="offcanvas-header">
@@ -121,7 +128,7 @@
 </div>
     <section class="hero">
     <div class="hero__overlay">
-        <img class="hero__overlay--image" src="./images/hero-bg.png" alt="">
+        <img class="hero__overlay--image" src="./images/hero-bg.jpg" alt="">
         <!-- <video class="hero__overlay--video" src="./images/hero-video.mp4" muted autoplay playinline loop> -->
     </div>
     <div class="container">
@@ -133,7 +140,8 @@
                 </div>
                 <div class="h1-wrapper">
                     <h1 class="headline1">Kerakli huquqiy yordamni oson toping</h1>
-                    <p class="body2">ADVO orqali mos advokat yoki yuridik tashkilotni toping, xizmatlarni solishtiring va <br>
+                    <p class="body2">ADVO orqali mos advokat yoki yuridik tashkilotni toping, xizmatlarni solishtiring
+                        va <br>
                         konsultatsiyani bir necha qadamda boshlang.</p>
                 </div>
                 <div class="hero__content-app">
@@ -155,14 +163,47 @@
             </div>
         </div>
         <div class="hero-image">
-            <div class="hero-image__item hero-image__item--side">
+            <div class="hero-image__item hero-image__item--side hero-image__item--left">
                 <img src="./images/hero-img-1.png" alt="App Preview 1">
+
+                <div class="hero-image__card hero-image__card--lawyer">
+                    <div class="hero-image__card-top">
+                        <img class="hero-image__card--avatar" src="./images/hero-img-5.svg" alt="Aziz Karimov">
+                        <div class="hero-image__card-info">
+                            <p class="hero-image__card-name">
+                                Aziz Karimov
+                                <img class="hero-image__card-badge" src="./images/hero-img-7.svg" alt="">
+                            </p>
+                            <p class="hero-image__card-role">Advokat &middot; 8 yil tajriba</p>
+                            <p class="hero-image__card-rating">
+                                <img src="./images/star-icon.svg" alt="">
+                                4.9 (128 ta sharh)
+                            </p>
+                        </div>
+                        <img class="hero-image__card-bookmark" src="./images/hero-img-6.svg" alt="">
+                    </div>
+                    <div class="hero-image__card-tag">Fuqarolik huquqi <span>+4</span></div>
+                </div>
+
+                <div class="hero-image__clients">
+                    <div class="hero-image__clients--flex">
+                        <img src="./images/features-img-1.svg" alt="">
+                        <span class="hero-image__clients-rating body2">4.9+</span>
+                    </div>
+                    <p class="body2">Minglab mijozlar<br>bizga ishondi</p>
+                </div>
             </div>
+
             <div class="hero-image__item hero-image__item--main">
                 <img src="./images/hero-img-2.png" alt="App Preview 2">
             </div>
-            <div class="hero-image__item hero-image__item--side">
+
+            <div class="hero-image__item hero-image__item--side hero-image__item--right">
                 <img src="./images/hero-img-3.png" alt="App Preview 3">
+                <div class="hero-image__bubble">
+                    <img src="./images/hero-img-4.svg" alt="">
+                    <p class="body2">Huquqiy masalalar bo‘yicha savol bering</p>
+                </div>
             </div>
         </div>
         <div class="placeholder"></div>
@@ -195,62 +236,70 @@
         </div>
     </div>
 </section>
-    <div class="about">
+    <div class="about" id="about">
     <div class="container">
         <div class="about-section">
-            <div class="about-section-scacet">
-                <div class="about-section-scacet-card">
-                    <div class="about-section-scacet-card-image">
-                        <img src="./images/about-img-1.png" alt="">
-                    </div>
-                    <div class="about-section-scacet-card-text">
-                        <h5 class="subtitle3 slate900">Lawo AI</h5>
-                        <p class="body2 slate600">Huquqiy muammoingizni yozing. ADVO AI uni tahlil qilib, mos huquq
-                            sohasi va advokatlarni
-                            tavsiya qiladi.</p>
-                    </div>
-                </div>
-                <div class="about-section-scacet-card">
-                    <div class="about-section-scacet-card-image">
-                        <img src="./images/about-img-2.png" alt="">
-                    </div>
-                    <div class="about-section-scacet-card-text">
-                        <h5 class="subtitle3 slate900">Qabulga yozilish</h5>
-                        <p class="body2 slate600">O‘zingizga qulay sana va vaqtni tanlang, konsultatsiya formatini
-                            belgilang va qabulni oldindan rejalashtiring.</p>
-                    </div>
-                </div>
+            <div class="about-section-title">
+                <h4 class="headline5">Huquqiy yordam uchun kerak bo‘lgan barcha imkoniyatlar — bir joyda.</h4>
             </div>
-            <div class="about-section-item">
-                <div class="about-section-item-text">
-                    <h5 class="subtitle3">Advokat topish</h5>
-                    <p class="body2">Kerakli mutaxassisni tez va oson toping. Advokatlarni mutaxassisligi, tajribasi,
-                        reytingi va
-                        xizmatlari bo‘yicha solishtiring.</p>
-                </div>
-                <div class="about-section-item-image">
-                    <img src="./images/about-img-3.png" alt="">
-                </div>
-            </div>
-            <div class="about-section-scacet">
-                <div class="about-section-scacet-card">
-                    <div class="about-section-scacet-card-image">
-                        <img src="./images/about-img-4.png" alt="">
+            <div class="about-section-main">
+                <div class="about-section-scacet">
+                    <div class="about-section-scacet-card">
+                        <div class="about-section-scacet-card-image">
+                            <img src="./images/about-img-1.png" alt="">
+                        </div>
+                        <div class="about-section-scacet-card-text">
+                            <h5 class="subtitle3 slate900">Lawo AI</h5>
+                            <p class="body2 slate600">Huquqiy muammoingizni yozing. ADVO AI uni tahlil qilib, mos huquq
+                                sohasi va advokatlarni
+                                tavsiya qiladi.</p>
+                        </div>
                     </div>
-                    <div class="about-section-scacet-card-text">
-                        <h5 class="subtitle3 slate900">Hujjatlar shablonlari</h5>
-                        <p class="body2 slate600">Tayyor hujjat shablonini tanlang, ma’lumotlarni kiriting va PDF yoki
-                            DOCX formatida yuklab oling.</p>
+                    <div class="about-section-scacet-card">
+                        <div class="about-section-scacet-card-image">
+                            <img src="./images/about-img-2.png" alt="">
+                        </div>
+                        <div class="about-section-scacet-card-text">
+                            <h5 class="subtitle3 slate900">Qabulga yozilish</h5>
+                            <p class="body2 slate600">O‘zingizga qulay sana va vaqtni tanlang, konsultatsiya formatini
+                                belgilang va qabulni oldindan rejalashtiring.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="about-section-scacet-card">
-                    <div class="about-section-scacet-card-image">
-                        <img src="./images/about-img-5.png" alt="">
+                <div class="about-section-item">
+                    <div class="about-section-item-text">
+                        <h5 class="subtitle3">Advokat topish</h5>
+                        <p class="body2">Kerakli mutaxassisni tez va oson toping. Advokatlarni mutaxassisligi,
+                            tajribasi,
+                            reytingi va
+                            xizmatlari bo‘yicha solishtiring.</p>
                     </div>
-                    <div class="about-section-scacet-card-text">
-                        <h5 class="subtitle3 slate900">Yevroprotokol</h5>
-                        <p class="body2 slate600">YTH holatida joylashuvingizni yuboring, mavjud mutaxassisni chaqiring
-                            va xizmat jarayonini kuzating.</p>
+                    <div class="about-section-item-image">
+                        <img src="./images/about-img-3.png" alt="">
+                    </div>
+                </div>
+                <div class="about-section-scacet">
+                    <div class="about-section-scacet-card">
+                        <div class="about-section-scacet-card-image">
+                            <img src="./images/about-img-4.png" alt="">
+                        </div>
+                        <div class="about-section-scacet-card-text">
+                            <h5 class="subtitle3 slate900">Hujjatlar shablonlari</h5>
+                            <p class="body2 slate600">Tayyor hujjat shablonini tanlang, ma’lumotlarni kiriting va PDF
+                                yoki
+                                DOCX formatida yuklab oling.</p>
+                        </div>
+                    </div>
+                    <div class="about-section-scacet-card">
+                        <div class="about-section-scacet-card-image">
+                            <img src="./images/about-img-5.png" alt="">
+                        </div>
+                        <div class="about-section-scacet-card-text">
+                            <h5 class="subtitle3 slate900">Yevroprotokol</h5>
+                            <p class="body2 slate600">YTH holatida joylashuvingizni yuboring, mavjud mutaxassisni
+                                chaqiring
+                                va xizmat jarayonini kuzating.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -260,7 +309,7 @@
     <div class="medcard">
     <div class="container">
         <div class="medcard-section">
-            <div class="medcard-section-item">                              
+            <div class="medcard-section-item">
                 <div class="medcard-section-item-content">
                     <div class="medcard-section-item-content-subtitle">
                         <h3 class="headline5">Barcha tibbiy ma'lumotlaringiz bitta MedKartada.</h3>
@@ -305,17 +354,41 @@
                             </div>
                             <div class="medcard-section-item-content-wrapper-card-text">
                                 <h5 class="subtitle4">Saqlanganlar</h5>
-                                <p class="body3">Sizga qiziq bo‘lgan advokat va yuridik tashkilotlarni saqlab qo‘ying.</p>
+                                <p class="body3">Sizga qiziq bo‘lgan advokat va yuridik tashkilotlarni saqlab qo‘ying.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="medcard-section-item-image">
-                    <div class="medcard-section-item-image-phone" data-aos="fade-up"
-                        data-aos-anchor-placement="top-bottom">
-                        <img src="./images/medcard-img-5.png" alt="Phone mockup">
+
+                    <div class="medcard-carousel owl-carousel">
+
+                        <div class="medcard-section-item-image-phone">
+                            <img src="./images/medcard-img-5.png" alt="Phone mockup">
+                        </div>
+
+                        <div class="medcard-section-item-image-phone">
+                            <img src="./images/medcard-img-5.png" alt="Phone mockup">
+                        </div>
+
+                        <div class="medcard-section-item-image-phone">
+                            <img src="./images/medcard-img-5.png" alt="Phone mockup">
+                        </div>
+
+                        <div class="medcard-section-item-image-phone">
+                            <img src="./images/medcard-img-5.png" alt="Phone mockup">
+                        </div>
                     </div>
+
+                    <div class="medcard-carousel-progress">
+                        <span class="active"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -323,16 +396,91 @@
 </div>
     <div class="features">
     <div class="container">
-        <div class="features-info">
-            <div class="features-info-title">
-                <h5>Nima uchun <span>Lawo</span></h5>
-                <p>Lawo sizga kerakli advokat yoki yuridik tashkilotni topish, ularning tajribasi, mutaxassisligi,
-                    reytingi
-                    va xizmatlarini ko‘rib chiqish imkonini beradi.</p>
+        <div class="features-main">
+            <div class="features-info-wrapper">
+                <div class="features-info">
+                    <div class="features-info-title">
+                        <h5 class="headline5">Nima uchun <span>Lawo</span></h5>
+                        <p class="body2">Lawo sizga kerakli advokat yoki yuridik tashkilotni topish, ularning tajribasi,
+                            mutaxassisligi,
+                            reytingi
+                            va xizmatlarini ko‘rib chiqish imkonini beradi.</p>
+                    </div>
+                    <div class="features-info-link">
+                        <p class="body2">Minglab mijozlar bizga ishondi</p>
+                        <div class="features-info-link-item">
+                            <img src="./images/features-img-1.svg" alt="">
+                            <button class="button1">4.9+</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="features-info-link">
-                <p>Minglab mijozlar bizga ishondi</p>
-                <div></div>
+
+            <div class="features-wrapper">
+                <div class="features-wrapper-card">
+                    <div class="features-wrapper-card-image">
+                        <img src="./images/features-img-2.png" alt="">
+                    </div>
+                    <div class="features-wrapper-card-item">
+                        <div class="features-wrapper-card-item-icon">
+                            <img src="./images/features-img-3.svg" alt="">
+                        </div>
+                        <div class="features-wrapper-card-item-text">
+                            <h5 class="subtitle5 slate900">Hammasi bir joyda</h5>
+                            <p class="body3">Advokatlar, yuridik tashkilotlar, huquqiy xizmatlar, hujjatlar va
+                                qabullarni bitta
+                                platformada toping va boshqaring.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="features-wrapper-card">
+                    <div class="features-wrapper-card-item">
+                        <div class="features-wrapper-card-item-icon">
+                            <img src="./images/features-img-3.svg" alt="">
+                        </div>
+                        <div class="features-wrapper-card-item-text">
+                            <h5 class="subtitle5 slate900">Hammasi bir joyda</h5>
+                            <p class="body3">Advokatlar, yuridik tashkilotlar, huquqiy xizmatlar, hujjatlar va
+                                qabullarni bitta
+                                platformada toping va boshqaring.</p>
+                        </div>
+                    </div>
+                    <div class="features-wrapper-card-image2">
+                        <img src="./images/features-img-4.png" alt="">
+                    </div>
+                </div>
+                <div class="features-wrapper-card">
+                    <div class="features-wrapper-card-image">
+                        <img src="./images/features-img-2.png" alt="">
+                    </div>
+                    <div class="features-wrapper-card-item">
+                        <div class="features-wrapper-card-item-icon">
+                            <img src="./images/features-img-3.svg" alt="">
+                        </div>
+                        <div class="features-wrapper-card-item-text">
+                            <h5 class="subtitle5 slate900">Hammasi bir joyda</h5>
+                            <p class="body3">Advokatlar, yuridik tashkilotlar, huquqiy xizmatlar, hujjatlar va
+                                qabullarni bitta
+                                platformada toping va boshqaring.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="features-wrapper-card">
+                    <div class="features-wrapper-card-item">
+                        <div class="features-wrapper-card-item-icon">
+                            <img src="./images/features-img-3.svg" alt="">
+                        </div>
+                        <div class="features-wrapper-card-item-text">
+                            <h5 class="subtitle5 slate900">Hammasi bir joyda</h5>
+                            <p class="body3">Advokatlar, yuridik tashkilotlar, huquqiy xizmatlar, hujjatlar va
+                                qabullarni bitta
+                                platformada toping va boshqaring.</p>
+                        </div>
+                    </div>
+                    <div class="features-wrapper-card-image2">
+                        <img src="./images/features-img-4.png" alt="">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -784,105 +932,144 @@
         </div>
     </div>
 </div>
-    <div class="faq">
+    <div class="contact-faq">
     <div class="container">
-        <s ection class="faq">
-            <div class="faq-text">
-                <h2 class="headline5">Ko'p so'raladigan savollar.</h2>
+        <div class="contact-faq-wrapper">
+
+            <div class="contact-form">
+                <div class="contact-form-text">
+                    <h2 class="headline5">ADVO bilan hamkorlikni boshlang</h2>
+                    <p class="body3">Advokat sifatida ADVO platformasiga qo‘shiling yoki hamkorlik taklifingizni
+                        yuboring. Ma’lumotlaringizni qoldiring — jamoamiz siz bilan bog‘lanadi.</p>
+                </div>
+
+                <form class="contact-form-fields">
+                    <div class="contact-form-row">
+                        <div class="contact-form-group">
+                            <label class="body5">Ism va familiya <span>*</span></label>
+                            <input type="text" placeholder="Ism Familiya Otangizning ismi" required>
+                        </div>
+                        <div class="contact-form-group">
+                            <label class="body5">Telefon raqami <span>*</span></label>
+                            <input type="tel" placeholder="+998 __ ___ __ __" required>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-row">
+                        <div class="contact-form-group">
+                            <label class="body5">Elektron pochta</label>
+                            <input type="email" placeholder="example@mail.com">
+                        </div>
+                        <div class="contact-form-group">
+                            <label class="body5">Hamkorlik turi <span>*</span></label>
+                            <div class="contact-form-select">
+                                <select required>
+                                    <option value="" disabled selected>Hamkorlik turini tanlang</option>
+                                    <option value="lawyer">Advokat</option>
+                                    <option value="organization">Yuridik tashkilot</option>
+                                    <option value="partner">Hamkor</option>
+                                </select>
+                                <i class="i-chevron-down"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-group contact-form-group--full">
+                        <label class="body5">Izoh</label>
+                        <textarea rows="4" placeholder="Qisqacha izoh qoldiring"></textarea>
+                    </div>
+
+                    <button type="submit" class="contact-form-submit button1">
+                        Ariza yuborish
+                        <i class="i-teligram"></i>
+                    </button>
+                </form>
             </div>
-            <div class="faq-item">
-                <div class="question subtitle5">
-                    MedPro nima?
-                    <i class="i-dropdown"></i>
+
+            <div class="faq">
+                <div class="faq-text">
+                    <h2 class="headline5">Ko'p so'raladigan savollar.</h2>
                 </div>
-                <div class="answer body3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid magnam minima quo sit, beatae ipsum
-                    totam debitis magni dolorum sapiente voluptas nobis aspernatur! Illo saepe optio beatae ullam
-                    voluptate impedit
-                    odio accusamus natus qui cumque excepturi rerum modi aspernatur illum iusto atque at nihil quo
-                    nesciunt voluptatibus sunt, cum, ab tempora quas. Expedita itaque est numquam sit veniam cumque
-                    provident! Sed eligendi
-                    nobis numquam nisi non. Adipisci voluptatem commodi repellat sit placeat quaerat deleniti iure error
-                    sint porro. Nobis autem reiciendis impedit, veritatis cupiditate asperiores tempore mollitia eaque
-                    sequi quam.
-                    Fugit illum quidem non laudantium repellendus eos laboriosam dolorum obcaecati.
+
+                <div class="faq-item active">
+                    <div class="question subtitle5">
+                        ADVO nima?
+                        <i class="i-dropdown"></i>
+                    </div>
+                    <div class="answer body3">
+                        ADVO — huquqiy xizmatlarni bir joyda jamlagan raqamli platforma. Unda advokat topish, yuridik
+                        xizmatlardan foydalanish va huquqiy masalalarni boshqarish mumkin.
+                    </div>
                 </div>
-            </div>
-            <div class="faq-item">
-                <div class="question subtitle5">
-                    MedPro'dan foydalanish bepulmi?
-                    <i class="i-dropdown"></i>
+
+                <div class="faq-item">
+                    <div class="question subtitle5">
+                        ADVO’dan foydalanish bepulmi?
+                        <i class="i-dropdown"></i>
+                    </div>
+                    <div class="answer body3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </div>
                 </div>
-                <div class="answer body3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid magnam minima quo sit, beatae ipsum
-                    totam debitis magni dolorum sapiente voluptas nobis aspernatur! Illo saepe optio beatae ullam
-                    voluptate impedit
-                    odio accusamus natus qui cumque excepturi rerum modi aspernatur illum iusto atque at nihil quo
-                    nesciunt voluptatibus sunt, cum, ab tempora quas. Expedita itaque est numquam sit veniam cumque
-                    provident! Sed eligendi
-                    nobis numquam nisi non. Adipisci voluptatem commodi repellat sit placeat quaerat deleniti iure error
-                    sint porro. Nobis autem reiciendis impedit, veritatis cupiditate asperiores tempore mollitia eaque
-                    sequi quam.
-                    Fugit illum quidem non laudantium repellendus eos laboriosam dolorum obcaecati.
+
+                <div class="faq-item">
+                    <div class="question subtitle5">
+                        Qanday qilib advokat topaman?
+                        <i class="i-dropdown"></i>
+                    </div>
+                    <div class="answer body3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </div>
                 </div>
-            </div>
-            <div class="faq-item">
-                <div class="question subtitle5">
-                    Qabulga qanday yozilaman?
-                    <i class="i-dropdown"></i>
+
+                <div class="faq-item">
+                    <div class="question subtitle5">
+                        Advokat sifatida ADVO’ga qanday qo‘shilaman?
+                        <i class="i-dropdown"></i>
+                    </div>
+                    <div class="answer body3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </div>
                 </div>
-                <div class="answer body3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid magnam minima quo sit, beatae ipsum
-                    totam debitis magni dolorum sapiente voluptas nobis aspernatur! Illo saepe optio beatae ullam
-                    voluptate impedit
-                    odio accusamus natus qui cumque excepturi rerum modi aspernatur illum iusto atque at nihil quo
-                    nesciunt voluptatibus sunt, cum, ab tempora quas. Expedita itaque est numquam sit veniam cumque
-                    provident! Sed eligendi
-                    nobis numquam nisi non. Adipisci voluptatem commodi repellat sit placeat quaerat deleniti iure error
-                    sint porro. Nobis autem reiciendis impedit, veritatis cupiditate asperiores tempore mollitia eaque
-                    sequi quam.
-                    Fugit illum quidem non laudantium repellendus eos laboriosam dolorum obcaecati.
+
+                <div class="faq-item">
+                    <div class="question subtitle5">
+                        ADVO AI qanday ishlaydi?
+                        <i class="i-dropdown"></i>
+                    </div>
+                    <div class="answer body3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </div>
                 </div>
-            </div>
-            <div class="faq-item">
-                <div class="question subtitle5">
-                    MedKarta nima?
-                    <i class="i-dropdown"></i>
-                </div>
-                <div class="answer body3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid magnam minima quo sit, beatae ipsum
-                    totam debitis magni dolorum sapiente voluptas nobis aspernatur! Illo saepe optio beatae ullam
-                    voluptate impedit
-                    odio accusamus natus qui cumque excepturi rerum modi aspernatur illum iusto atque at nihil quo
-                    nesciunt voluptatibus sunt, cum, ab tempora quas. Expedita itaque est numquam sit veniam cumque
-                    provident! Sed eligendi
-                    nobis numquam nisi non. Adipisci voluptatem commodi repellat sit placeat quaerat deleniti iure error
-                    sint porro. Nobis autem reiciendis impedit, veritatis cupiditate asperiores tempore mollitia eaque
-                    sequi quam.
-                    Fugit illum quidem non laudantium repellendus eos laboriosam dolorum obcaecati.
+                
+                <div class="faq-item">
+                    <div class="question subtitle5">
+                        ADVO AI qanday ishlaydi?
+                        <i class="i-dropdown"></i>
+                    </div>
+                    <div class="answer body3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </div>
                 </div>
             </div>
-            <div class="faq-item">
-                <div class="question subtitle5">
-                    Tibbiy ma'lumotlarim xavfsizmi?
-                    <i class="i-dropdown"></i>
-                </div>
-                <div class="answer body3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid magnam minima quo sit, beatae ipsum
-                    totam debitis magni dolorum sapiente voluptas nobis aspernatur! Illo saepe optio beatae ullam
-                    voluptate impedit
-                    odio accusamus natus qui cumque excepturi rerum modi aspernatur illum iusto atque at nihil quo
-                    nesciunt voluptatibus sunt, cum, ab tempora quas. Expedita itaque est numquam sit veniam cumque
-                    provident! Sed eligendi
-                    nobis numquam nisi non. Adipisci voluptatem commodi repellat sit placeat quaerat deleniti iure error
-                    sint porro. Nobis autem reiciendis impedit, veritatis cupiditate asperiores tempore mollitia eaque
-                    sequi quam.
-                    Fugit illum quidem non laudantium repellendus eos laboriosam dolorum obcaecati.
-                </div>
-            </div>
-        </s>
+
+        </div>
     </div>
 </div>
+
+<script>
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+</script>
     <div class="health">
     <div class="container">
         <div class="health-main">
@@ -927,7 +1114,15 @@
         <div class="container">
             <div class="footer-top--item">
                 <div class="footer-top--item-logo">
-                    <img src="./images/logo.svg" alt="Logo">
+                    <div class="footer-top--item-logo-image">
+                      <div class="footer-top--item-logo-image-icon">
+                        <img src="./images/footer-logo.svg" alt="Logo">
+                      </div>
+                      <div class="footer-top--item-logo-image-text">
+                        <img src="./images/footer-logo-2.svg" alt="">
+                        <p>HUQUQLARINGIZ HIMOYASI DOIM SIZ BILAN</p>
+                      </div>
+                    </div>
                     <p class="body2">O'zbekistondagi birinchi to'liq tibbiy boshqaruv platformasi. Sog'lig'ingizni aqlli
                         boshqaring.</p>
                     <div class="footer-top--item-logo-icon">
@@ -971,7 +1166,7 @@
     </div>
     <div class="footer-bottom">
         <div class="container">
-            <p class="footer-bottom-item">© <span id="y"></span> NPUU</p>
+            <p class="footer-bottom-item">© <span id="y"></span> NPUU Barcha huquqlar himoyalangan</p>
             <script>y.textContent = new Date().getFullYear()</script>
             <a href="https://proend.ru" target="_blank" class="footer-bottom-item ">
                 Sayt ishlab chiquvchisi:
@@ -1029,6 +1224,46 @@
             992: { items: 3 },
             1200: { items: 4 }
         }
+    });
+
+    const medcardCarousel = $(".medcard-carousel");
+
+    medcardCarousel.owlCarousel({
+        items: 1,
+        loop: true,
+        margin: 0,
+        nav: false,
+        dots: false,
+
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: true,
+
+        smartSpeed: 800,
+
+        animateOut: "slideOutDown",
+        animateIn: "slideInDown"
+    });
+
+
+    medcardCarousel.on("changed.owl.carousel", function (event) {
+
+        const index = event.item.index - event.relatedTarget._clones.length / 2;
+
+        const total = event.item.count;
+
+        let current = index % total;
+
+        if (current < 0) {
+            current += total;
+        }
+
+        $(".medcard-carousel-progress span")
+            .removeClass("active");
+
+        $(".medcard-carousel-progress span")
+            .eq(current)
+            .addClass("active");
     });
 </script>
     <!-- <script>

@@ -21,24 +21,31 @@
 
 <body>
     <header class="header">
-    <div class="container">
-        <div class="header-main">
-            <div class="header-main-logo">
-                <img src="./images/logo.svg" alt="">
-            </div>
-            <div class="header-main-content">
-                <a href="#" class="active body5">Bosh sahifa</a>
-                <a href="#" class="body5">Imkoniyatlar</a>
-                <a href="#" class="body5">Shifokorlar</a>
-                <a href="#" class="body5">Klinikalar</a>
-                <a href="#" class="body5">MedPro AI</a>
-                <a href="#" class="body5">FAQ</a>
-            </div>
-            <div class="header-main-download">
-                <a href="#" class="button1">Yuklab olish <i class="i-dowland"></i></a>
-            </div>
+  <div class="container">
+    <div class="header-main">
+      <div class="header-main-logo">
+        <div class="header-main-logo-image">
+          <img src="./images/logo.svg" alt="">
         </div>
+        <div class="header-main-logo-text">
+          <img src="./images/header-logo.svg" alt="">
+          <p>HUQUQLARINGIZ HIMOYASI DOIM SIZ BILAN</p>
+        </div>
+      </div>
+      <div class="header-main-content">
+        <a href="#about" class="active body5">Bosh sahifa</a>
+        <a href="#" class="body5">Imkoniyatlar</a>
+        <a href="#" class="body5">Advokatlar</a>
+        <a href="#" class="body5">Tashkilotlar</a>
+        <a href="#" class="body5">Lawo AI</a>
+        <a href="#" class="body5">Obunalar</a>
+        <a href="#" class="body5">FAQ</a>
+      </div>
+      <div class="header-main-download">
+        <a href="#" class="button1">Yuklab olish <i class="i-dowland"></i></a>
+      </div>
     </div>
+  </div>
 </header>
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
     <div class="offcanvas-header">
@@ -321,7 +328,15 @@
         <div class="container">
             <div class="footer-top--item">
                 <div class="footer-top--item-logo">
-                    <img src="./images/logo.svg" alt="Logo">
+                    <div class="footer-top--item-logo-image">
+                      <div class="footer-top--item-logo-image-icon">
+                        <img src="./images/footer-logo.svg" alt="Logo">
+                      </div>
+                      <div class="footer-top--item-logo-image-text">
+                        <img src="./images/footer-logo-2.svg" alt="">
+                        <p>HUQUQLARINGIZ HIMOYASI DOIM SIZ BILAN</p>
+                      </div>
+                    </div>
                     <p class="body2">O'zbekistondagi birinchi to'liq tibbiy boshqaruv platformasi. Sog'lig'ingizni aqlli
                         boshqaring.</p>
                     <div class="footer-top--item-logo-icon">
@@ -365,7 +380,7 @@
     </div>
     <div class="footer-bottom">
         <div class="container">
-            <p class="footer-bottom-item">© <span id="y"></span> NPUU</p>
+            <p class="footer-bottom-item">© <span id="y"></span> NPUU Barcha huquqlar himoyalangan</p>
             <script>y.textContent = new Date().getFullYear()</script>
             <a href="https://proend.ru" target="_blank" class="footer-bottom-item ">
                 Sayt ishlab chiquvchisi:
@@ -423,6 +438,46 @@
             992: { items: 3 },
             1200: { items: 4 }
         }
+    });
+
+    const medcardCarousel = $(".medcard-carousel");
+
+    medcardCarousel.owlCarousel({
+        items: 1,
+        loop: true,
+        margin: 0,
+        nav: false,
+        dots: false,
+
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: true,
+
+        smartSpeed: 800,
+
+        animateOut: "slideOutDown",
+        animateIn: "slideInDown"
+    });
+
+
+    medcardCarousel.on("changed.owl.carousel", function (event) {
+
+        const index = event.item.index - event.relatedTarget._clones.length / 2;
+
+        const total = event.item.count;
+
+        let current = index % total;
+
+        if (current < 0) {
+            current += total;
+        }
+
+        $(".medcard-carousel-progress span")
+            .removeClass("active");
+
+        $(".medcard-carousel-progress span")
+            .eq(current)
+            .addClass("active");
     });
 </script>
 

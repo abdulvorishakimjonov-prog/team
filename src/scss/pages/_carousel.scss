@@ -4,20 +4,7 @@
     overflow: hidden;
 
     &-section {
-        margin-bottom: 220px;
-
-        @include devices(lg) {
-            margin-bottom: 160px;
-        }
-
-        @include devices(md) {
-            margin-bottom: 100px;
-        }
-
-        @include devices(sm) {
-            margin-bottom: 70px;
-        }
-
+        padding: 100px 0;
 
         &-title {
             display: flex;

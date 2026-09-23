@@ -1,127 +1,231 @@
 @use '../config/mixins' as *;
 
 .header {
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: var(--height-header);
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: var(--height-header);
 
-    *,
-    & {
-        transition: all .2s ease;
+  *,
+  & {
+    transition: all 0.2s ease;
+  }
+
+  .button.transparent {
+    background: var(--blue8);
+    border: 1px solid #FFFFFF33;
+    backdrop-filter: none;
+    color: var(--blue2);
+  }
+
+  &.index {
+    .header-top {
+      background: transparent;
+      border-bottom: 1px solid #FFFFFF33;
+      color: white;
+    }
+
+    .header-bottom {
+      background: transparent;
+      color: white;
+    }
+
+    .header-menu-link {
+      color: white;
+    }
+
+    .header-search {
+      color: white;
     }
 
     .button.transparent {
-        background: var(--blue8);
-        border: 1px solid #FFFFFF33;
-        backdrop-filter: none;
-        color: var(--blue2);
+      background: #FFFFFF1A;
+      border: 1px solid #FFFFFF33;
+      backdrop-filter: blur(15px);
+      color: white;
+    }
+  }
+
+  .container {
+    padding: 16px;
+    gap: 8px;
+
+    @include devices(lg) {
+      padding: 14px;
     }
 
-    &.index {
-        .header-top {
-            background: transparent;
-            border-bottom: 1px solid #FFFFFF33;
-            color: white;
-        }
-
-        .header-bottom {
-            background: transparent;
-            color: white;
-        }
-
-        .header-menu-link {
-            color: white;
-        }
-
-        .header-search {
-            color: white;
-        }
-
-        .button.transparent {
-            background: #FFFFFF1A;
-            border: 1px solid #FFFFFF33;
-            backdrop-filter: blur(15px);
-            color: white;
-        }
+    @include devices(md) {
+      padding: 10px;
+      gap: 6px;
     }
 
-    .container {
-        // display: flex;
-        // flex-direction: row;
-        // align-items: center;
-        padding: 16px;
-        gap: 8px;
+    @include devices(sm) {
+      padding: 8px;
+    }
+  }
+
+  &-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    @include devices(md) {
+      gap: 10px;
+    }
+
+    &-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
+
+      @include devices(md) {
+        gap: 10px;
+      }
+
+      &-image {
+        width: 50px;
+        height: 42px;
 
         @include devices(md) {
-            padding: 10px;
-            gap: 8px;
+          width: 42px;
+          height: 36px;
         }
-    }
 
-    &-main {
+        @include devices(sm) {
+          width: 36px;
+          height: 32px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      &-text {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        flex-direction: column;
+        gap: 5px;
 
-        &-logo {
-            max-width: 54px;
-            max-height: 48px;
-            width: 100%;
-            height: 100%;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
+        @include devices(md) {
+          gap: 3px;
         }
 
-        &-content {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: #FFFFFF33;
-            border-radius: 41px;
-            padding: 4px;
+        img {
+          width: 110px;
+          height: 18px;
+          object-fit: contain;
 
-            @include devices(lg) {
-                gap: 5px;
-            }
+          @include devices(md) {
+            width: 95px;
+            height: auto;
+          }
 
-            @include devices(md) {
-                display: none;
-            }
-
-            a {
-                padding: 10px 16px;
-                border-radius: 79px;
-                color: #FFFFFF;
-
-                &.active {
-                    box-shadow: 0px 1px 2px 0px #0A0D120D;
-                    background: #FFFFFF;
-                    color: #0F172A;
-                }
-            }
+          @include devices(sm) {
+            width: 80px;
+          }
         }
 
-        &-download {
-            background: white;
-            padding: 12px 16px;
-            border-radius: 49px;
-            display: flex;
-            align-content: center;
-            gap: 8px;
-            color: #51A2FF;
+        p {
+          margin: 0;
+          font-size: 11px;
+          font-weight: 500;
+          line-height: 130%;
+          color: white;
 
-            i {
-                font-size: 24px;
-            }
+          @include devices(md) {
+            font-size: 9px;
+          }
+
+          @include devices(sm) {
+            font-size: 8px;
+          }
         }
+      }
     }
 
+    &-content {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #FFFFFF33;
+      border-radius: 41px;
+      padding: 4px;
+
+      @include devices(lg) {
+        gap: 5px;
+      }
+
+      @include devices(md) {
+        display: none;
+      }
+
+      a {
+        padding: 10px 16px;
+        border-radius: 79px;
+        color: #FFFFFF;
+        white-space: nowrap;
+
+        @include devices(lg) {
+          padding: 8px 12px;
+          font-size: 14px;
+        }
+
+        &.active {
+          box-shadow: 0px 1px 2px 0px #0A0D120D;
+          background: #FFFFFF;
+          color: #0F172A;
+        }
+      }
+    }
+
+    &-download {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: white;
+      padding: 12px 16px;
+      border-radius: 49px;
+      color: #51A2FF;
+      white-space: nowrap;
+      flex-shrink: 0;
+
+      @include devices(lg) {
+        padding: 10px 14px;
+        gap: 6px;
+      }
+
+      @include devices(md) {
+        padding: 8px 12px;
+      }
+
+      @include devices(sm) {
+        padding: 7px 10px;
+        font-size: 12px;
+      }
+
+      i {
+        font-size: 24px;
+
+        @include devices(lg) {
+          font-size: 20px;
+        }
+
+        @include devices(md) {
+          font-size: 18px;
+        }
+
+        @include devices(sm) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
 }

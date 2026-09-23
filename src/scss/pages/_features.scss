@@ -1,37 +1,381 @@
 @use '../config/mixins' as *;
 
 .features {
-    background: #EFF6FF;
+  background: #EFF6FF;
+  position: relative;
+  padding: 100px 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  &::before {
+    top: 0;
+
+    background: linear-gradient(180deg,
+        #FFFFFF 0%,
+        rgba(255, 255, 255, 0) 100%);
+  }
+
+  &::after {
+    bottom: 0;
+
+    background: linear-gradient(0deg,
+        #FFFFFF 0%,
+        rgba(255, 255, 255, 0) 100%);
+  }
+
+  >* {
     position: relative;
-    padding: 100px 0;
+    z-index: 1;
+  }
+
+  &-main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    gap: 30px;
+
+    @include devices(lg) {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+
+    @include devices(md) {
+      gap: 40px;
+    }
+
+    @include devices(sm) {
+      gap: 30px;
+    }
+  }
+
+  &-info {
+    position: relative;
+    align-self: start;
+
+    p {
+      color: #475569;
+    }
+
+    &-wrapper {
+      position: sticky;
+      top: 120px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 116px;
+
+      @include devices(lg) {
+        position: static;
+        gap: 50px;
+      }
+
+      @include devices(md) {
+        gap: 35px;
+      }
+
+      @include devices(sm) {
+        gap: 25px;
+      }
+    }
+
+    &-title {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+
+      max-width: 657px;
+
+      h5 {
+        color: #0F172A;
+
+        span {
+          color: #2B7FFF;
+        }
+      }
+    }
+
+    &-link {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      &-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        img {
+          width: 108px;
+          height: 36px;
+          object-fit: cover;
+
+          @include devices(md) {
+            width: 100px;
+            height: 34px;
+          }
+
+          @include devices(sm) {
+            width: 90px;
+            height: 30px;
+          }
+        }
+
+        button {
+          background: linear-gradient(180deg,
+              #69AFFF 0%,
+              #1C8AFF 100%);
+
+          border-radius: 42px;
+          padding: 7px 10px;
+
+          color: white;
+
+          @include devices(sm) {
+            padding: 6px 9px;
+          }
+        }
+      }
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include devices(md) {
+      gap: 24px;
+    }
+
+    @include devices(sm) {
+      gap: 20px;
+    }
+
+    &-card {
+      background: #FFFFFF;
+      border-radius: 32px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      max-height: 336px;
+      justify-content: space-between;
+      overflow: hidden;
+
+      @include devices(md) {
+        grid-template-columns: 1fr 1fr;
+        max-height: none;
+        border-radius: 26px;
+      }
+
+      @include devices(sm) {
+        grid-template-columns: 1fr;
+        gap: 0;
+        border-radius: 22px;
+      }
+
+      &-image {
+        padding: 30px 0 0 30px;
+
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+
+        @include devices(md) {
+          padding: 24px 0 0 24px;
+        }
+
+        @include devices(sm) {
+          padding: 20px 20px 0;
+          min-height: 220px;
+        }
+
+        &::after {
+          content: "";
+
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+
+          height: 45%;
+
+          background: linear-gradient(180deg,
+              rgba(255, 255, 255, 0) 0%,
+              #FFFFFF 100%);
+
+          pointer-events: none;
+          border-radius: 32px;
+
+          @include devices(md) {
+            height: 40%;
+          }
+
+          @include devices(sm) {
+            height: 35%;
+            border-radius: 22px;
+          }
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+
+          @include devices(sm) {
+            max-height: 260px;
+          }
+        }
+      }
+
+      &-image2 {
+        padding: 30px 30px 0;
+
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+
+        @include devices(md) {
+          padding: 24px 24px 0;
+        }
+
+        @include devices(sm) {
+          padding: 20px 20px 0;
+          min-height: 220px;
+        }
+
+        &::after {
+          content: "";
+
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+
+          height: 45%;
+
+          background: linear-gradient(180deg,
+              rgba(255, 255, 255, 0) 0%,
+              #FFFFFF 100%);
+
+          pointer-events: none;
+
+          @include devices(md) {
+            height: 40%;
+          }
+
+          @include devices(sm) {
+            height: 35%;
+          }
+        }
+
+        img {
+          width: 250px;
+          height: 300px;
+          object-fit: cover;
+
+          @include devices(md) {
+            width: 220px;
+            height: 270px;
+          }
+
+          @include devices(sm) {
+            width: 100%;
+            max-width: 250px;
+            height: 240px;
+            margin: 0 auto;
+            display: block;
+          }
+        }
+      }
+
+      &-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        gap: 120px;
+        padding: 30px;
+
+        @include devices(md) {
+          gap: 60px;
+          padding: 24px;
+        }
+
+        @include devices(sm) {
+          gap: 35px;
+          padding: 20px;
+        }
+
+        &-icon {
+          width: 54px;
+          height: 54px;
+
+          overflow: hidden;
+          padding: 11px;
+
+          background: #DBEAFE;
+          border-radius: 64px;
+
+          @include devices(md) {
+            width: 48px;
+            height: 48px;
+            padding: 9px;
+          }
+
+          @include devices(sm) {
+            width: 44px;
+            height: 44px;
+            padding: 8px;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        &-text {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+
+          p {
+            color: #475569;
+          }
+        }
+      }
+    }
+  }
+
+  @include devices(lg) {
+    padding: 80px 0;
+  }
+
+  @include devices(md) {
+    padding: 60px 0;
 
     &::before,
     &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 120px;
-        pointer-events: none;
-        z-index: 0;
+      height: 90px;
     }
+  }
 
-    &::before {
-        top: 0;
-        background: linear-gradient(180deg,
-                #FFFFFF 0%,
-                rgba(255, 255, 255, 0) 100%);
-    }
+  @include devices(sm) {
+    padding: 40px 0;
 
+    &::before,
     &::after {
-        bottom: 0;
-        background: linear-gradient(0deg,
-                #FFFFFF 0%,
-                rgba(255, 255, 255, 0) 100%);
+      height: 60px;
     }
-
-    >* {
-        position: relative;
-        z-index: 1;
-    }
+  }
 }

@@ -3,7 +3,15 @@
         <div class="container">
             <div class="footer-top--item">
                 <div class="footer-top--item-logo">
-                    <img src="@/images/logo.svg" alt="Logo">
+                    <div class="footer-top--item-logo-image">
+                      <div class="footer-top--item-logo-image-icon">
+                        <img src="@/images/footer-logo.svg" alt="Logo">
+                      </div>
+                      <div class="footer-top--item-logo-image-text">
+                        <img src="@/images/footer-logo-2.svg" alt="">
+                        <p>HUQUQLARINGIZ HIMOYASI DOIM SIZ BILAN</p>
+                      </div>
+                    </div>
                     <p class="body2">O'zbekistondagi birinchi to'liq tibbiy boshqaruv platformasi. Sog'lig'ingizni aqlli
                         boshqaring.</p>
                     <div class="footer-top--item-logo-icon">
@@ -47,7 +55,7 @@
     </div>
     <div class="footer-bottom">
         <div class="container">
-            <p class="footer-bottom-item">© <span id="y"></span> NPUU</p>
+            <p class="footer-bottom-item">© <span id="y"></span> NPUU Barcha huquqlar himoyalangan</p>
             <script>y.textContent = new Date().getFullYear()</script>
             <a href="https://proend.ru" target="_blank" class="footer-bottom-item ">
                 Sayt ishlab chiquvchisi:
@@ -105,5 +113,45 @@
             992: { items: 3 },
             1200: { items: 4 }
         }
+    });
+
+    const medcardCarousel = $(".medcard-carousel");
+
+    medcardCarousel.owlCarousel({
+        items: 1,
+        loop: true,
+        margin: 0,
+        nav: false,
+        dots: false,
+
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: true,
+
+        smartSpeed: 800,
+
+        animateOut: "slideOutDown",
+        animateIn: "slideInDown"
+    });
+
+
+    medcardCarousel.on("changed.owl.carousel", function (event) {
+
+        const index = event.item.index - event.relatedTarget._clones.length / 2;
+
+        const total = event.item.count;
+
+        let current = index % total;
+
+        if (current < 0) {
+            current += total;
+        }
+
+        $(".medcard-carousel-progress span")
+            .removeClass("active");
+
+        $(".medcard-carousel-progress span")
+            .eq(current)
+            .addClass("active");
     });
 </script>
