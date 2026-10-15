@@ -20,34 +20,21 @@
     @@include('components/section/faq.html')
     @@include('components/section/health.html')
     @@include('components/layout/footer.html')
-    <!-- <script>
-        (() => {
-            const header = document.querySelector('.header')
-            const logo = document.querySelector('.header-logo-img')
-            const threshold = 30
-            let ticking = false
-            let lastTop = null
+    <script>
+        document.querySelector('.header').classList.add('light');
 
-            const update = () => {
-                const isTop = window.scrollY <= threshold
-                if (isTop === lastTop) return
-                lastTop = isTop
-                header.classList.toggle('index', isTop)
-                logo.src = isTop ? '/images/logo-light.png' : '/images/logo-dark.png'
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.header');
+            if (!header) return;
+
+            function onScroll() {
+                header.classList.toggle('light', window.scrollY <= 30);
             }
 
-            update()
-
-            window.addEventListener('scroll', () => {
-                if (ticking) return
-                ticking = true
-                requestAnimationFrame(() => {
-                    update()
-                    ticking = false
-                })
-            }, { passive: true })
-        })()
-    </script> -->
+            onScroll();
+            window.addEventListener('scroll', onScroll);
+        });
+    </script>
 
     <script>
         AOS.init();

@@ -65,6 +65,14 @@
             @include devices(lg) {
               max-width: 100%;
             }
+
+            @include devices(md) {
+              font-size: 35px;
+            }
+
+            @include devices(sm) {
+              font-size: 28px;
+            }
           }
 
           p {
@@ -226,8 +234,15 @@
         }
 
         .medcard-carousel {
-          width: 100%;
-          height: 100%;
+          &.owl-carousel {
+            .owl-stage {
+              transition-timing-function: cubic-bezier(0.65, 0, 0.35, 1) !important;
+            }
+
+            .owl-item {
+              backface-visibility: hidden; 
+            }
+          }
         }
 
         &-phone {

@@ -7,47 +7,61 @@
   left: 0;
   right: 0;
   width: 100%;
-  height: var(--height-header);
+  background: white;
 
   *,
   & {
     transition: all 0.2s ease;
   }
 
-  .button.transparent {
-    background: var(--blue8);
-    border: 1px solid #FFFFFF33;
-    backdrop-filter: none;
-    color: var(--blue2);
+  .none {
+    display: none;
   }
 
-  &.index {
-    .header-top {
-      background: transparent;
-      border-bottom: 1px solid #FFFFFF33;
-      color: white;
+  .header-main-logo-bloc {
+    display: block;
+  }
+
+  &.light {
+    background: transparent;
+
+    .none {
+      display: block;
     }
 
-    .header-bottom {
-      background: transparent;
-      color: white;
+    .header-main-logo-bloc {
+      display: none;
     }
 
-    .header-menu-link {
-      color: white;
+    .header-main-logo {
+      &-text {
+        p {
+          color: #ffffff;
+        }
+      }
     }
 
-    .header-search {
-      color: white;
+    .header-main-content {
+      background: #FFFFFF33;
+
+      a {
+        color: #FFFFFF;
+
+        &.active {
+          color: #0F172A;
+        }
+      }
     }
 
-    .button.transparent {
-      background: #FFFFFF1A;
-      border: 1px solid #FFFFFF33;
-      backdrop-filter: blur(15px);
-      color: white;
+    .header-main-download {
+      background: #FFFFFF;
+
+      a {
+        color: #51A2FF;
+      }
     }
   }
+
 
   .container {
     padding: 16px;
@@ -67,19 +81,25 @@
     }
   }
 
+
   &-main {
+    position: relative;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 16px;
 
     @include devices(md) {
       gap: 10px;
     }
 
+
     &-logo {
       display: flex;
       align-items: center;
+
       gap: 14px;
       flex-shrink: 0;
 
@@ -111,7 +131,9 @@
       &-text {
         display: flex;
         flex-direction: column;
+
         gap: 5px;
+        margin-top: 11px;
 
         @include devices(md) {
           gap: 3px;
@@ -120,6 +142,7 @@
         img {
           width: 110px;
           height: 18px;
+
           object-fit: contain;
 
           @include devices(md) {
@@ -134,10 +157,12 @@
 
         p {
           margin: 0;
+
           font-size: 11px;
           font-weight: 500;
           line-height: 130%;
-          color: white;
+
+          color: #475569;
 
           @include devices(md) {
             font-size: 9px;
@@ -150,13 +175,31 @@
       }
     }
 
+    // ========================================
+    // MENU
+    // ========================================
+
     &-content {
+      position: absolute;
+
+      left: 50%;
+      top: 50%;
+
+      transform: translate(-50%, -50%);
+
       display: flex;
       align-items: center;
+      justify-content: center;
+
       gap: 10px;
-      background: #FFFFFF33;
+
+      background: #F1F5F9;
+
       border-radius: 41px;
+
       padding: 4px;
+
+      z-index: 2;
 
       @include devices(lg) {
         gap: 5px;
@@ -168,8 +211,11 @@
 
       a {
         padding: 10px 16px;
+
         border-radius: 79px;
-        color: #FFFFFF;
+
+        color: #475569;
+
         white-space: nowrap;
 
         @include devices(lg) {
@@ -179,23 +225,42 @@
 
         &.active {
           box-shadow: 0px 1px 2px 0px #0A0D120D;
+
           background: #FFFFFF;
+
           color: #0F172A;
         }
       }
     }
 
+    // ========================================
+    // DOWNLOAD BUTTON
+    // ========================================
+
     &-download {
       display: flex;
       align-items: center;
       justify-content: center;
+
       gap: 8px;
-      background: white;
+
+      background: linear-gradient(180deg,
+          #69AFFF 0%,
+          #1C8AFF 100%);
+
       padding: 12px 16px;
+
       border-radius: 49px;
-      color: #51A2FF;
+
+      color: #FFFFFF;
+
       white-space: nowrap;
+
       flex-shrink: 0;
+
+      a {
+        color: #ffffff;
+      }
 
       @include devices(lg) {
         padding: 10px 14px;

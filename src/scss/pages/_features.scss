@@ -67,7 +67,7 @@
 
     &-wrapper {
       position: sticky;
-      top: 120px;
+      top: var(--info-sticky-offset, 120px);
 
       display: flex;
       flex-direction: column;
@@ -75,10 +75,12 @@
 
       @include devices(lg) {
         position: static;
+        top: auto;
         gap: 50px;
       }
 
       @include devices(md) {
+        margin-bottom: 50px;
         gap: 35px;
       }
 
@@ -91,14 +93,36 @@
       display: flex;
       flex-direction: column;
       gap: 6px;
-
+      margin-bottom: 100px;
       max-width: 657px;
+
+      @include devices(md) {
+        margin-bottom: 50px;
+      }
 
       h5 {
         color: #0F172A;
 
         span {
           color: #2B7FFF;
+        }
+
+        @include devices(md) {
+          font-size: 35px;
+        }
+
+        @include devices(sm) {
+          font-size: 28px;
+        }
+      }
+
+      p {
+        @include devices(md) {
+          font-size: 18px;
+        }
+
+        @include devices(sm) {
+          font-size: 16px;
         }
       }
     }
@@ -113,19 +137,50 @@
         align-items: center;
         gap: 8px;
 
-        img {
-          width: 108px;
-          height: 36px;
-          object-fit: cover;
+        &-avatars {
+          display: flex;
+          align-items: center;
 
-          @include devices(md) {
-            width: 100px;
-            height: 34px;
+          .avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            margin-left: -14px;
+            transition: margin-left 0.3s ease;
+
+            &:first-child {
+              margin-left: 0;
+            }
+
+            @include devices(md) {
+              width: 38px;
+              height: 38px;
+              margin-left: -12px;
+
+              &:first-child {
+                margin-left: 0;
+              }
+            }
+
+            @include devices(sm) {
+              width: 32px;
+              height: 32px;
+              margin-left: -10px;
+
+              &:first-child {
+                margin-left: 0;
+              }
+            }
           }
 
-          @include devices(sm) {
-            width: 90px;
-            height: 30px;
+          &:hover .avatar {
+            margin-left: 4px;
+
+            &:first-child {
+              margin-left: 0;
+            }
           }
         }
 
@@ -166,28 +221,32 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 16px;
-      max-height: 336px;
+      height: 336px;
       justify-content: space-between;
       overflow: hidden;
 
+      @include devices(lg) {
+        height: 300px;
+      }
+
       @include devices(md) {
-        grid-template-columns: 1fr 1fr;
-        max-height: none;
-        border-radius: 26px;
+        height: 280px;
       }
 
       @include devices(sm) {
         grid-template-columns: 1fr;
-        gap: 0;
-        border-radius: 22px;
+        height: auto;
       }
 
       &-image {
         padding: 30px 0 0 30px;
-
         position: relative;
         overflow: hidden;
         z-index: 2;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
 
         @include devices(md) {
           padding: 24px 0 0 24px;
@@ -195,23 +254,20 @@
 
         @include devices(sm) {
           padding: 20px 20px 0;
-          min-height: 220px;
+          justify-content: center;
+          height: auto;
         }
 
         &::after {
           content: "";
-
           position: absolute;
           left: 0;
           right: 0;
           bottom: 0;
-
           height: 45%;
-
           background: linear-gradient(180deg,
               rgba(255, 255, 255, 0) 0%,
               #FFFFFF 100%);
-
           pointer-events: none;
           border-radius: 32px;
 
@@ -227,21 +283,28 @@
 
         img {
           width: 100%;
-          height: 100%;
-          object-fit: cover;
+          height: auto;
+          max-height: 100%;
+          object-fit: contain;
+          object-position: left bottom;
 
           @include devices(sm) {
-            max-height: 260px;
+            width: 100%;
+            max-width: 320px;
+            height: auto;
           }
         }
       }
 
       &-image2 {
         padding: 30px 30px 0;
-
         position: relative;
         overflow: hidden;
         z-index: 2;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
 
         @include devices(md) {
           padding: 24px 24px 0;
@@ -249,23 +312,19 @@
 
         @include devices(sm) {
           padding: 20px 20px 0;
-          min-height: 220px;
+          height: auto;
         }
 
         &::after {
           content: "";
-
           position: absolute;
           left: 0;
           right: 0;
           bottom: 0;
-
           height: 45%;
-
           background: linear-gradient(180deg,
               rgba(255, 255, 255, 0) 0%,
               #FFFFFF 100%);
-
           pointer-events: none;
 
           @include devices(md) {
@@ -278,21 +337,15 @@
         }
 
         img {
-          width: 250px;
-          height: 300px;
-          object-fit: cover;
-
-          @include devices(md) {
-            width: 220px;
-            height: 270px;
-          }
+          width: auto;
+          height: 100%;
+          max-height: 100%;
+          object-fit: contain;
 
           @include devices(sm) {
             width: 100%;
-            max-width: 250px;
-            height: 240px;
-            margin: 0 auto;
-            display: block;
+            max-width: 240px;
+            height: auto;
           }
         }
       }
@@ -301,29 +354,29 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
-        gap: 120px;
         padding: 30px;
+        height: 100%;
 
         @include devices(md) {
-          gap: 60px;
           padding: 24px;
         }
 
         @include devices(sm) {
-          gap: 35px;
+          height: auto;
+          gap: 16px;
           padding: 20px;
+          align-items: center;
+          text-align: center;
         }
 
         &-icon {
           width: 54px;
           height: 54px;
-
           overflow: hidden;
           padding: 11px;
-
           background: #DBEAFE;
           border-radius: 64px;
+          flex-shrink: 0;
 
           @include devices(md) {
             width: 48px;
@@ -335,6 +388,7 @@
             width: 44px;
             height: 44px;
             padding: 8px;
+            margin: 0 auto;
           }
 
           img {
@@ -349,8 +403,23 @@
           flex-direction: column;
           gap: 4px;
 
+          @include devices(sm) {
+            align-items: center;
+          }
+
+          h5 {
+            @include devices(sm) {
+              font-size: 20px;
+            }
+          }
+
           p {
             color: #475569;
+
+            @include devices(sm) {
+              font-size: 16px;
+              max-width: 280px;
+            }
           }
         }
       }

@@ -71,7 +71,7 @@
       gap: 6px;
     }
 
-    h2 {
+    h4 {
       @include devices(md) {
         font-size: 28px;
       }
@@ -85,7 +85,7 @@
       color: #475569;
 
       @include devices(sm) {
-        font-size: 14px;
+        font-size: 12px;
       }
     }
   }
@@ -121,7 +121,7 @@
 
       &-image {
         width: 100%;
-        max-width: 503px;
+        max-width: px;
         max-height: 394px;
         margin-bottom: 16px;
 

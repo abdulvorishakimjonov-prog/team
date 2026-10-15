@@ -65,10 +65,12 @@
 
         @include devices(md) {
           max-width: 600px;
+          font-size: 30px;
         }
 
         @include devices(sm) {
           max-width: 100%;
+          font-size: 25px;
         }
       }
     }
@@ -112,21 +114,6 @@
         border-radius: 32px;
         padding: 10px;
 
-        @include devices(lg) {
-          border-radius: 28px;
-          padding: 9px;
-        }
-
-        @include devices(md) {
-          border-radius: 24px;
-          padding: 8px;
-        }
-
-        @include devices(sm) {
-          border-radius: 20px;
-          padding: 7px;
-        }
-
         &-image {
           max-width: 503px;
           max-height: 242px;
@@ -142,13 +129,19 @@
           @include devices(md) {
             max-width: 100%;
             max-height: 300px;
-            margin-bottom: 8px;
+            margin-bottom: 70px;
           }
 
           @include devices(sm) {
             max-height: 220px;
-            margin-bottom: 6px;
+            margin-bottom: 100px;
           }
+
+          @include devices(xs) {
+            max-height: 220px;
+            margin-bottom: 10px;
+          }
+
 
           img {
             display: block;
@@ -185,6 +178,18 @@
           @include devices(sm) {
             gap: 4px;
             padding: 6px;
+          }
+
+          h5 {
+            @include devices(sm) {
+              font-size: 20px;
+            }
+          }
+
+          p {
+            @include devices(sm) {
+              font-size: 14px;
+            }
           }
         }
       }
@@ -235,12 +240,27 @@
           gap: 4px;
           margin-bottom: 20px;
         }
+
+        h5 {
+          @include devices(sm) {
+            font-size: 20px;
+          }
+        }
+
+        p {
+          @include devices(sm) {
+            font-size: 14px;
+          }
+        }
       }
 
       &-image {
         position: relative;
         max-width: 374px;
         margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
 
         @include devices(lg) {
@@ -248,7 +268,7 @@
         }
 
         @include devices(md) {
-          max-width: 400px;
+          max-width: 300px;
         }
 
         @include devices(sm) {
@@ -259,6 +279,10 @@
           display: block;
           width: 100%;
           height: auto;
+
+          @include devices(sm) {
+            width: 250px;
+          }
         }
 
         &::after {

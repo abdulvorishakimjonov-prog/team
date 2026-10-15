@@ -57,7 +57,7 @@
         }
 
         @include devices(sm) {
-          margin-bottom: 18px;
+          margin-bottom: 10px;
           gap: 4px;
         }
 
@@ -98,9 +98,12 @@
         width: 100%;
 
         &-item {
+          position: relative;
           padding: 20px 0;
-          border-bottom: 1px solid #E2E8F0;
           width: 100%;
+          cursor: pointer;
+
+          border-bottom: 1px solid #E2E8F0;
 
           @include devices(lg) {
             padding: 18px 0;
@@ -113,43 +116,244 @@
           @include devices(sm) {
             padding: 14px 0;
           }
+
+          h5 {
+            color: #0F172A;
+
+            @include devices(sm) {
+              font-size: 20px;
+            }
+          }
+
+          p {
+            color: #475569;
+
+            @include devices(sm) {
+              font-size: 16px;
+            }
+          }
+
+          .progress-line {
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            height: 2px;
+            width: 0;
+            background: #2563EB;
+            display: block;
+          }
+
+          &.is-filling .progress-line {
+            animation: fillLine linear forwards;
+            animation-duration: var(--fill-duration, 4s);
+          }
+        }
+      }
+
+      @keyframes fillLine {
+        from {
+          width: 0%;
+        }
+
+        to {
+          width: 100%;
         }
       }
     }
 
     &-box {
+      border-radius: 32px;
+      background: #F1F5F9;
       max-width: 791px;
       max-height: 481px;
-      width: 100%;
-
-      @include devices(md) {
-        max-width: 100%;
-        max-height: none;
-      }
-
-      @include devices(sm) {
-        max-height: none;
-      }
+      position: relative;
+      z-index: 0;
+      overflow: hidden;
 
       img {
+        position: relative;
+        z-index: 1;
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 32px;
+      }
 
-        @include devices(lg) {
-          border-radius: 28px;
+      &-icon {
+        position: absolute;
+        inset: 0;
+        z-index: 3;
+        pointer-events: none;
+
+        &-item {
+          position: absolute;
+          width: fit-content;
+          max-width: 90%;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          padding: 6px 8px;
+          border-radius: 63px;
+          background: #FFF;
+          box-shadow:
+            0 12px 16px -4px rgba(10, 13, 18, 0.08),
+            0 4px 6px -2px rgba(10, 13, 18, 0.03);
+          white-space: nowrap;
+
+          img {
+            width: 20px;
+            height: 20px;
+            object-fit: cover;
+            flex-shrink: 0;
+          }
+
+          p {
+            font-size: 13px;
+            white-space: nowrap;
+          }
+
+          @include devices(lg) {
+            padding: 5px 7px;
+            gap: 5px;
+
+            img {
+              width: 18px;
+              height: 18px;
+            }
+
+            p {
+              font-size: 12px;
+            }
+          }
+
+          @include devices(md) {
+            padding: 4px 6px;
+            gap: 4px;
+
+            img {
+              width: 16px;
+              height: 16px;
+            }
+
+            p {
+              font-size: 10px;
+            }
+          }
+
+          @include devices(sm) {
+            padding: 3px 5px;
+            gap: 3px;
+            max-width: 80%;
+
+            img {
+              width: 13px;
+              height: 13px;
+            }
+
+            p {
+              font-size: 8px;
+            }
+          }
+
+          &:nth-child(1) {
+            top: 15%;
+            left: 10%;
+            opacity: 0;
+            animation: iconDrop1 0.8s ease-out forwards;
+
+            @include devices(sm) {
+              top: 10%;
+              left: 4%;
+            }
+          }
+
+          &:nth-child(2) {
+            top: 15%;
+            right: 5%;
+            opacity: 0;
+            animation: iconDrop2 0.8s ease-out 0.2s forwards;
+
+            @include devices(sm) {
+              top: 8%;
+              right: 2%;
+            }
+          }
+
+          &:nth-child(3) {
+            top: 35%;
+            left: 38%;
+            opacity: 0;
+            animation: iconDrop3 0.8s ease-out 0.4s forwards;
+
+            @include devices(sm) {
+              top: 32%;
+              left: 30%;
+            }
+          }
+
+          &.icon-fade-out {
+            &:nth-child(1) {
+              animation: iconDrop1 0.5s ease-in reverse forwards !important;
+            }
+
+            &:nth-child(2) {
+              animation: iconDrop2 0.5s ease-in reverse forwards !important;
+            }
+
+            &:nth-child(3) {
+              animation: iconDrop3 0.5s ease-in reverse forwards !important;
+            }
+          }
+        }
+      }
+
+      @keyframes iconDrop1 {
+        0% {
+          opacity: 0;
+          transform: translateY(-150px) rotate(-10deg);
         }
 
-        @include devices(md) {
-          height: auto;
-          max-height: 500px;
-          border-radius: 24px;
+        70% {
+          opacity: 1;
+          transform: translateY(10px) rotate(-10deg);
         }
 
-        @include devices(sm) {
-          max-height: 400px;
-          border-radius: 20px;
+        100% {
+          opacity: 1;
+          transform: translateY(0) rotate(-10deg);
+        }
+      }
+
+      @keyframes iconDrop2 {
+        0% {
+          opacity: 0;
+          transform: translateY(-150px) rotate(13deg);
+        }
+
+        70% {
+          opacity: 1;
+          transform: translateY(10px) rotate(13deg);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateY(0) rotate(13deg);
+        }
+      }
+
+      @keyframes iconDrop3 {
+        0% {
+          opacity: 0;
+          transform: translateY(-150px) rotate(-13deg);
+        }
+
+        70% {
+          opacity: 1;
+          transform: translateY(10px) rotate(-13deg);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateY(0) rotate(-13deg);
         }
       }
     }

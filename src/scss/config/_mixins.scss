@@ -98,7 +98,7 @@ $device-breakpoints: (
 }
 
 .subtitle5 {
-    @include font($size: 22px, $weight: 500);
+    @include font($size: 22px, $weight: 600);
 }
 
 .subtitle6 {
@@ -155,6 +155,10 @@ $device-breakpoints: (
 
 .body12 {
     @include font($size: 12px, $weight: 400);
+}
+
+.body13 {
+    @include font($size: 12px, $weight: 500);
 }
 
 .button1 {

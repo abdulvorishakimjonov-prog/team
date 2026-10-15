@@ -116,15 +116,9 @@
         }
 
         @include devices(md) {
-          margin-left: 0;
-          margin-top: 20px;
-          display: flex;
-          justify-content: center;
+          display: none;
         }
 
-        @include devices(sm) {
-          margin-top: 15px;
-        }
 
         img {
           width: 1420px;
@@ -194,7 +188,7 @@
           }
 
           &-item {
-            width: 523px;
+            width: 489px;
             min-height: 210px;
             background: #FFFFFF;
             border: 1px solid;
@@ -210,7 +204,7 @@
             flex-direction: column;
             align-items: flex-start;
             justify-content: space-between;
-            gap: 60px;
+            gap: 36px;
 
             @include devices(lg) {
               width: 420px;
@@ -260,8 +254,26 @@
             }
           }
 
+          .left {
+            position: relative;
+            left: 64px;
+
+            @include devices(md) {
+              left: 0;
+            }
+          }
+
+          .right {
+            position: relative;
+            right: 64px;
+
+            @include devices(md) {
+              right: 0;
+            }
+          }
+
           &-card {
-            width: 419px;
+            width: 500px;
             min-height: 233px;
             background: #FFFFFF;
             border: 1px solid;
@@ -277,7 +289,7 @@
             flex-direction: column;
             align-items: flex-start;
             justify-content: space-between;
-            gap: 60px;
+            gap: 36px;
 
             @include devices(lg) {
               width: 340px;
