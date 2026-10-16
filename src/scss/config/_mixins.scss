@@ -62,27 +62,27 @@ $device-breakpoints: (
 }
 
 .headline1 {
-    @include font($size: 58px, $weight: 600);
+    @include font($size: 58px, $weight: 700);
 }
 
 .headline2 {
-    @include font($size: 52px, $weight: 600);
+    @include font($size: 52px, $weight: 700);
 }
 
 .headline3 {
-    @include font($size: 48px, $weight: 600);
+    @include font($size: 48px, $weight: 700);
 }
 
 .headline4 {
-    @include font($size: 42px, $weight: 600);
+    @include font($size: 42px, $weight: 700);
 }
 
 .headline5 {
-    @include font($size: 36px, $weight: 600);
+    @include font($size: 36px, $weight: 700);
 }
 
 .subtitle1 {
-    @include font($size: 32px, $weight: 600);
+    @include font($size: 32px, $weight: 700);
 }
 
 .subtitle2 {
@@ -102,15 +102,19 @@ $device-breakpoints: (
 }
 
 .subtitle6 {
-    @include font($size: 20px, $weight: 600);
+    @include font($size: 22px, $weight: 500);
 }
 
 .subtitle7 {
-    @include font($size: 20px, $weight: 500);
+    @include font($size: 20px, $weight: 600);
 }
 
 .subtitle8 {
     @include font($size: 20px, $weight: 500);
+}
+
+.subtitle8 {
+    @include font($size: 20px, $weight: 400);
 }
 
 .body1 {
@@ -158,5 +162,5 @@ $device-breakpoints: (
 }
 
 .button2 {
-    @include font($size: 16px, $weight: 500, $line-height: 24px);
+    @include font($size: 18px, $weight: 500, $line-height: 24px);
 }

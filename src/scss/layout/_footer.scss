@@ -127,12 +127,12 @@
 
         p {
           display: flex;
-          align-items: center;
           gap: 10px;
 
           span {
             width: 8px;
             height: 8px;
+            margin-top: 4px;
             flex-shrink: 0;
             border-radius: 50%;
             background: #1C398E;
@@ -172,14 +172,13 @@
         left: 0;
         right: 0;
         bottom: 0;
-
         height: 35%;
-
+        border-radius: 32px;
         background: linear-gradient(0deg,
             #FFFFFF 0%,
             rgba(255, 255, 255, 0) 100%);
 
-        z-index: 10;
+        z-index: 6;
         pointer-events: none;
       }
 
