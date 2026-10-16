@@ -9,6 +9,7 @@
     @@include('components/layout/header.html')
     @@include('components/layout/menu.html')
     @@include('components/section/hero.html')
+<<<<<<< HEAD
     @@include('components/section/programs.html')
     @@include('components/section/about.html')
     @@include('components/section/news.html')
@@ -43,6 +44,38 @@
     </script>
 
 
+=======
+    @@include('components/section/about.html')
+    @@include('components/section/medcard.html')
+    @@include('components/section/features.html')
+    @@include('components/section/carousel.html')
+    @@include('components/section/assistant.html')
+    @@include('components/section/medical.html')
+    @@include('components/section/accident.html')
+    @@include('components/section/subscription.html')
+    @@include('components/section/faq.html')
+    @@include('components/section/health.html')
+    @@include('components/layout/footer.html')
+    <script>
+        document.querySelector('.header').classList.add('light');
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.header');
+            if (!header) return;
+
+            function onScroll() {
+                header.classList.toggle('light', window.scrollY <= 30);
+            }
+
+            onScroll();
+            window.addEventListener('scroll', onScroll);
+        });
+    </script>
+
+    <script>
+        AOS.init();
+    </script>
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
 </body>
 
 </html>

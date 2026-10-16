@@ -3,7 +3,11 @@
 .sidebar {
     position: sticky;
     top: calc(10px + var(--height-header));
+<<<<<<< HEAD
     border-radius: 24px;
+=======
+    border-radius: 16px;
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
     overflow: hidden;
 
     @include devices(md) {
@@ -12,12 +16,20 @@
     }
 
     &__title {
+<<<<<<< HEAD
         padding: 16px 16px 35px;
         position: relative;
         overflow: hidden;
 
         background: #1C398E;
         color: #FFFFFF;
+=======
+        padding: 12px;
+        position: relative;
+        overflow: hidden;
+        background: var(--blue2);
+        color: white;
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
 
         @include devices(md) {
             font-size: 16px;
@@ -29,6 +41,7 @@
             position: absolute;
             bottom: -15%;
             right: 5%;
+<<<<<<< HEAD
 
             width: 50px;
             height: 50px;
@@ -38,11 +51,19 @@
             background: url("../images/icon-transparent.svg") no-repeat;
             background-size: contain;
 
+=======
+            transform: rotate(-15deg);
+            width: 50px;
+            height: 50px;
+            background: url("../images/icon-transparent.svg") no-repeat;
+            background-size: contain;
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
             z-index: 1;
         }
     }
 
     &__list {
+<<<<<<< HEAD
         position: relative;
         top: -19px;
 
@@ -57,6 +78,12 @@
         color: #334155;
 
         overflow: hidden;
+=======
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background-color: white;
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
 
         * {
             transition: all 0.2s ease;
@@ -65,14 +92,24 @@
         &--item {
             cursor: pointer;
 
+<<<<<<< HEAD
             &:hover:not(.has-dropdown),
             &.active:not(.has-dropdown) {
 
+=======
+            .sidebar__link {
+                padding-right: 18px;
+            }
+
+            &:hover:not(.has-dropdown),
+            &.active:not(.has-dropdown) {
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
                 .sidebar__link {
                     padding-left: 38px;
                     padding-right: 0;
 
                     &::before {
+<<<<<<< HEAD
                         width: 10px;
                         height: 10px;
 
@@ -86,6 +123,17 @@
                             0 5px 5px 0 color-mix(in srgb,
                                 #C10007 10%,
                                 transparent);
+=======
+                        flex: 0 0 auto;
+                        opacity: 1;
+                        height: 20px;
+                        width: 20px;
+                        border: 3px solid var(--primary);
+                        box-shadow: 0px 5px 5px 0px color-mix(in srgb,
+                                var(--primary) 10%,
+                                transparent);
+                        z-index: 2;
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
                     }
                 }
             }
@@ -97,6 +145,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
+<<<<<<< HEAD
 
                     width: 100%;
                     padding: 12px;
@@ -107,6 +156,14 @@
                 &.open {
 
                     .sidebar__icon {
+=======
+                    padding: 12px;
+                    width: 100%;
+                }
+
+                &.open {
+                    .arrow {
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
                         transform: rotate(180deg);
                     }
 
@@ -119,6 +176,7 @@
         }
     }
 
+<<<<<<< HEAD
     &__link {
         position: relative;
 
@@ -148,11 +206,42 @@
             background: #C10007;
 
             transition: all 0.2s ease;
+=======
+    &__arrow {
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 6px solid #010B1B;
+        transition: transform 0.3s ease;
+        margin-left: 8px;
+    }
+
+    &__link {
+        position: relative;
+        display: flex;
+        padding: 12px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 12px;
+            width: 0;
+            height: 0;
+            transition: all 0.2s ease;
+            transform: translate(0, -50%);
+            opacity: 0;
+            background: url("../images/icon.svg") center;
+            background-size: contain;
+            z-index: 1;
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
         }
     }
 
     &__button {
         position: relative;
+<<<<<<< HEAD
 
         display: flex;
         align-items: center;
@@ -194,17 +283,40 @@
         transition:
             max-height 0.3s ease,
             opacity 0.2s ease;
+=======
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: color 0.2s ease;
+    }
+
+    &__dropdown {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all 0.2s ease;
+        background-color: white;
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
 
         &--item {
             border-top: 1px solid #EAEEF5;
 
             &:hover {
+<<<<<<< HEAD
                 background-color: #F0F2F5;
+=======
+                background-color: #f0f2f5;
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
 
                 .sidebar__dropdown--link {
                     padding-left: 48px;
 
                     &::before {
+<<<<<<< HEAD
                         width: 10px;
                         height: 10px;
 
@@ -217,6 +329,14 @@
                         box-shadow:
                             0 5px 5px 0 color-mix(in srgb,
                                 #C10007 10%,
+=======
+                        opacity: 1;
+                        width: 20px;
+                        height: 20px;
+                        border: 3px solid var(--primary);
+                        box-shadow: 0px 5px 5px 0px color-mix(in srgb,
+                                var(--primary) 10%,
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
                                 transparent);
                     }
                 }
@@ -224,6 +344,7 @@
         }
 
         &--link {
+<<<<<<< HEAD
             position: relative;
 
             display: block;
@@ -251,6 +372,26 @@
                 background: #C10007;
 
                 transition: all 0.2s ease;
+=======
+            display: block;
+            padding: 10px 12px 10px 20px;
+            position: relative;
+            transition: all 0.2s ease;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 20px;
+                width: 0;
+                height: 0;
+                transition: all 0.2s ease;
+                transform: translate(0, -50%);
+                opacity: 0;
+                background: url("../images/icon.svg") center;
+                background-size: contain;
+                z-index: 1;
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
             }
         }
     }

@@ -1,0 +1,368 @@
+@use '../config/mixins' as *;
+
+.health {
+  padding: 100px 0 0;
+
+  @include devices(lg) {
+    padding: 80px 0 0;
+  }
+
+  @include devices(md) {
+    padding: 60px 0 0;
+  }
+
+  @include devices(sm) {
+    padding: 40px 0 0;
+  }
+
+  &-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    max-height: 556px;
+    position: relative;
+    border-radius: 32px;
+    background: linear-gradient(180deg, #338CFF 0%, #4EB0FF 100%);
+
+    @include devices(lg) {
+      gap: 20px;
+      max-height: 520px;
+      border-radius: 28px;
+    }
+
+    @include devices(md) {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      max-height: none;
+      border-radius: 24px;
+    }
+
+    @include devices(sm) {
+      gap: 30px;
+      border-radius: 20px;
+    }
+
+    &-left {
+      display: flex;
+      flex-direction: column;
+      padding: 55px 0 55px 55px;
+      position: relative;
+      z-index: 3;
+
+      @include devices(lg) {
+        padding: 45px 0 45px 40px;
+        margin-top: 30px;
+      }
+
+      @include devices(md) {
+        width: 100%;
+        margin-top: 0;
+        padding: 40px 30px 0;
+        align-items: center;
+        text-align: center;
+      }
+
+      @include devices(sm) {
+        padding: 30px 16px 0;
+        margin-top: 0;
+      }
+
+      &-title {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        max-width: 711px;
+        margin-bottom: 42px;
+        color: white;
+
+        @include devices(lg) {
+          max-width: 600px;
+          margin-bottom: 32px;
+        }
+
+        @include devices(md) {
+          max-width: 650px;
+          margin-bottom: 26px;
+          align-items: center;
+        }
+
+        @include devices(sm) {
+          max-width: 100%;
+          margin-bottom: 20px;
+          gap: 4px;
+        }
+
+        h3 {
+          @include devices(lg) {
+            font-size: 32px;
+          }
+
+          @include devices(md) {
+            font-size: 28px;
+          }
+
+          @include devices(sm) {
+            font-size: 24px;
+          }
+        }
+
+        p {
+          max-width: 632px;
+
+          @include devices(md) {
+            max-width: 600px;
+          }
+
+          @include devices(sm) {
+            max-width: 100%;
+            font-size: 14px;
+            line-height: 1.5;
+          }
+        }
+      }
+
+      &-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 46px;
+
+        @include devices(lg) {
+          gap: 12px;
+          margin-bottom: 35px;
+        }
+
+        @include devices(md) {
+          justify-content: center;
+          margin-bottom: 28px;
+        }
+
+        @include devices(sm) {
+          gap: 8px;
+          margin-bottom: 22px;
+          width: 100%;
+        }
+
+        &-store {
+          width: 100%;
+          max-width: 180px;
+          display: flex;
+          align-items: center;
+          background: white;
+          border-radius: 12px;
+          padding: 8px 12px;
+          gap: 8px;
+
+          @include devices(lg) {
+            max-width: 180px;
+          }
+
+          @include devices(md) {
+            max-width: 180px;
+          }
+
+          @include devices(sm) {
+            max-width: 150px;
+            padding: 6px 8px;
+            gap: 6px;
+            border-radius: 10px;
+          }
+
+          img {
+            width: 32px;
+            height: 32px;
+            object-fit: cover;
+            flex-shrink: 0;
+
+            @include devices(md) {
+              width: 30px;
+              height: 30px;
+            }
+
+            @include devices(sm) {
+              width: 26px;
+              height: 26px;
+            }
+          }
+
+          &-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            color: #0F172A;
+
+            @include devices(sm) {
+              font-size: 11px;
+            }
+          }
+        }
+      }
+
+      &-qr {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: #FFFFFF;
+        border-radius: 24px;
+        padding: 12px;
+
+        @include devices(md) {
+          gap: 10px;
+          padding: 10px;
+          border-radius: 20px;
+        }
+
+        @include devices(sm) {
+          gap: 8px;
+          padding: 8px;
+          border-radius: 16px;
+        }
+
+        img {
+          width: 137px;
+          height: 137px;
+          object-fit: cover;
+          flex-shrink: 0;
+
+          @include devices(lg) {
+            width: 125px;
+            height: 125px;
+          }
+
+          @include devices(md) {
+            width: 115px;
+            height: 115px;
+          }
+
+          @include devices(sm) {
+            width: 90px;
+            height: 90px;
+          }
+        }
+
+        &-text {
+          max-width: 203px;
+          background: var(--slate-50, #F8FAFC);
+          border: 1px solid var(--slate-100, #F1F5F9);
+          border-radius: 12px;
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
+          gap: 9px;
+
+          @include devices(lg) {
+            max-width: 190px;
+          }
+
+          @include devices(md) {
+            max-width: 190px;
+            padding: 8px;
+            gap: 6px;
+          }
+
+          @include devices(sm) {
+            max-width: 150px;
+            padding: 7px;
+            gap: 5px;
+            border-radius: 10px;
+          }
+
+          h5 {
+            color: #475569;
+
+            @include devices(md) {
+              font-size: 14px;
+            }
+
+            @include devices(sm) {
+              font-size: 13px;
+            }
+          }
+
+          p {
+            color: #475569;
+            max-width: 169px;
+
+            @include devices(sm) {
+              max-width: 100%;
+              font-size: 11px;
+              line-height: 1.4;
+            }
+          }
+        }
+      }
+    }
+
+    &-right {
+      display: flex;
+      gap: 11px;
+      position: relative;
+      overflow: hidden;
+      align-items: flex-end;
+      z-index: 2;
+      padding: 0 32px 0;
+
+      @include devices(lg) {
+        gap: 16px;
+        padding: 0 25px 0;
+      }
+
+      @include devices(md) {
+        width: 100%;
+        justify-content: center;
+        gap: 14px;
+        padding: 0 25px;
+      }
+
+      @include devices(sm) {
+        gap: 8px;
+        padding: 0 12px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 45%;
+        background: linear-gradient(180deg,
+            rgba(74, 170, 255, 0) 0%,
+            #4EB0FF 100%);
+        pointer-events: none;
+        border-radius: 32px;
+        z-index: 3;
+
+        @include devices(md) {
+          height: 40%;
+        }
+
+        @include devices(sm) {
+          height: 35%;
+          border-radius: 20px;
+        }
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+
+        @include devices(lg) {
+          max-width: 48%;
+        }
+
+        @include devices(md) {
+          max-width: 45%;
+        }
+
+        @include devices(sm) {
+          max-width: 48%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,353 @@
+@use '../config/mixins' as *;
+
+.medcard {
+
+  &-section {
+    padding: 100px 0;
+
+    @include devices(lg) {
+      padding: 80px 0;
+    }
+
+    @include devices(md) {
+      padding: 60px 0;
+    }
+
+    @include devices(sm) {
+      padding: 40px 0;
+    }
+
+    &-item {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      gap: 16px;
+
+      @include devices(lg) {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      @include devices(md) {
+        gap: 20px;
+      }
+
+      @include devices(sm) {
+        gap: 16px;
+      }
+
+      &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include devices(md) {
+          gap: 16px;
+        }
+
+        @include devices(sm) {
+          gap: 14px;
+        }
+
+        &-subtitle {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+
+          @include devices(sm) {
+            gap: 4px;
+          }
+
+          h3 {
+            color: #0F172A;
+            max-width: 657px;
+
+            @include devices(lg) {
+              max-width: 100%;
+            }
+
+            @include devices(md) {
+              font-size: 35px;
+            }
+
+            @include devices(sm) {
+              font-size: 28px;
+            }
+          }
+
+          p {
+            color: #475569;
+
+            @include devices(sm) {
+              font-size: 14px;
+              line-height: 1.5;
+            }
+          }
+        }
+
+        &-wrapper {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 16px;
+
+          @include devices(md) {
+            gap: 12px;
+          }
+
+          @include devices(sm) {
+            grid-template-columns: 1fr;
+            gap: 10px;
+          }
+
+          &-card {
+            border-radius: 24px;
+            background: #EFF6FF;
+            padding: 20px;
+            height: 224px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include devices(lg) {
+              height: 210px;
+              padding: 18px;
+            }
+
+            @include devices(md) {
+              height: 190px;
+              padding: 16px;
+              border-radius: 20px;
+            }
+
+            @include devices(sm) {
+              height: auto;
+              min-height: 160px;
+              padding: 14px;
+              border-radius: 18px;
+              gap: 24px;
+            }
+
+            &-image {
+              width: 54px;
+              height: 54px;
+              border-radius: 50%;
+              background-color: #DBEAFE;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-shrink: 0;
+
+              @include devices(md) {
+                width: 48px;
+                height: 48px;
+              }
+
+              @include devices(sm) {
+                width: 44px;
+                height: 44px;
+              }
+
+              img {
+                width: 32px;
+                height: 32px;
+                object-fit: contain;
+
+                @include devices(md) {
+                  width: 28px;
+                  height: 28px;
+                }
+
+                @include devices(sm) {
+                  width: 24px;
+                  height: 24px;
+                }
+              }
+            }
+
+            &-text {
+              h5 {
+                color: #0F172A;
+                font-size: 20px;
+                font-weight: 600;
+                margin: 0 0 8px 0;
+
+                @include devices(md) {
+                  font-size: 18px;
+                  margin-bottom: 6px;
+                }
+
+                @include devices(sm) {
+                  font-size: 16px;
+                  margin-bottom: 5px;
+                }
+              }
+
+              p {
+                color: #64754B;
+                font-size: 15px;
+                font-weight: 400;
+                margin: 0;
+                line-height: 1.5;
+
+                @include devices(md) {
+                  font-size: 14px;
+                }
+
+                @include devices(sm) {
+                  font-size: 13px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &-image {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        border-radius: 24px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        background: #F1F5F9;
+        max-height: 702px;
+        height: 100%;
+        min-height: 500px;
+
+        @include devices(lg) {
+          max-height: 650px;
+          min-height: 500px;
+        }
+
+        @include devices(md) {
+          max-height: 600px;
+          min-height: 450px;
+          border-radius: 20px;
+        }
+
+        @include devices(sm) {
+          max-height: 500px;
+          min-height: 380px;
+          border-radius: 18px;
+        }
+
+        .medcard-carousel {
+          &.owl-carousel {
+            .owl-stage {
+              transition-timing-function: cubic-bezier(0.65, 0, 0.35, 1) !important;
+            }
+
+            .owl-item {
+              backface-visibility: hidden; 
+            }
+          }
+        }
+
+        &-phone {
+          width: 466px;
+          display: flex;
+          justify-content: center;
+          padding-top: 120px;
+          margin: 0 auto;
+
+          @include devices(lg) {
+            width: 420px;
+            padding-top: 90px;
+          }
+
+          @include devices(md) {
+            width: 360px;
+            padding-top: 70px;
+          }
+
+          @include devices(sm) {
+            width: 280px;
+            padding-top: 50px;
+          }
+
+          img {
+            width: 100%;
+            max-width: 380px;
+            height: auto;
+            object-fit: contain;
+            display: block;
+
+            @include devices(lg) {
+              max-width: 350px;
+            }
+
+            @include devices(md) {
+              max-width: 310px;
+            }
+
+            @include devices(sm) {
+              max-width: 250px;
+            }
+
+            mask-image: linear-gradient(to bottom,
+              rgba(0, 0, 0, 1) 70%,
+              rgba(0, 0, 0, 0) 100%);
+
+            -webkit-mask-image: linear-gradient(to bottom,
+              rgba(0, 0, 0, 1) 70%,
+              rgba(0, 0, 0, 0) 100%);
+          }
+        }
+
+        .medcard-carousel-progress {
+          position: absolute;
+          right: 24px;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 10;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+
+          @include devices(md) {
+            right: 16px;
+            gap: 6px;
+          }
+
+          @include devices(sm) {
+            right: 10px;
+            gap: 5px;
+          }
+
+          span {
+            display: block;
+            width: 3px;
+            height: 24px;
+            border-radius: 10px;
+            background: #CBD5E1;
+            transition: all 0.4s ease;
+
+            @include devices(md) {
+              height: 20px;
+            }
+
+            @include devices(sm) {
+              width: 2px;
+              height: 16px;
+            }
+
+            &.active {
+              height: 48px;
+              background: #2B7FFF;
+
+              @include devices(md) {
+                height: 40px;
+              }
+
+              @include devices(sm) {
+                height: 32px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
 <footer class="footer">
+<<<<<<< HEAD
   <div class="container">
     <div class="footer-banner">
       <div class="footer-banner-text">
@@ -113,6 +114,68 @@
       <p class="footer-bottom-item body3 ">Copyright © <span id="y"></span>, Team University</p>
       <script>y.textContent = new Date().getFullYear()</script>
       <a href="https://proend.ru" target="_blank" class="footer-bottom-item body3">
+=======
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-top--item">
+        <div class="footer-top--item-logo">
+          <div class="footer-top--item-logo-image">
+            <div class="footer-top--item-logo-image-icon">
+              <img src="@/images/footer-logo.svg" alt="Logo">
+            </div>
+            <div class="footer-top--item-logo-image-text">
+              <img src="@/images/footer-logo-2.svg" alt="">
+              <p>HUQUQLARINGIZ HIMOYASI DOIM SIZ BILAN</p>
+            </div>
+          </div>
+          <p class="body2">Huquqiy xizmatlarni bir joyda toping, boshqaring va oling. Lawo — foydalanuvchilar,
+            advokatlar va yuridik tashkilotlarni yagona raqamli platformada birlashtiradi..</p>
+          <div class="footer-top--item-logo-icon">
+            <a href="#"><i class="i-teligram"></i></a>
+            <a href="#"><i class="i-instagram"></i></a>
+            <a href="#"><i class="i-facebook"></i></a>
+            <a href="#"><i class="i-watsap"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-top--item-content">
+          <div class="footer-top--item-content-link">
+            <p class="body1">Platforma</p>
+            <a href="#" class="body2">Advokatlar</a>
+            <a href="#" class="body2">Tashkilotlar</a>
+            <a href="#" class="body2">Hujjatlar shablonlari</a>
+            <a href="#" class="body2">ADVO AI</a>
+            <a href="#" class="body2">Yevroprotokol</a>
+          </div>
+          <div class="footer-top--item-content-link">
+            <p class="body1">Kompaniya</p>
+            <a href="#" class="body2">Biz haqimizda</a>
+            <a href="#" class="body2">Yangiliklar</a>
+            <a href="#" class="body2">Blog</a>
+            <a href="#" class="body2">Hamkorlik</a>
+            <a href="#" class="body2">Ish o’rinlari</a>
+          </div>
+          <div class="footer-top--item-content-link">
+            <p class="body1">Yordam</p>
+            <a href="#" class="body2">Faq</a>
+            <a href="#" class="body2">Aloqa</a>
+            <a href="#" class="body2">Maxfiylik siyosati</a>
+            <a href="#" class="body2">Foydalanish shartlari</a>
+            <a href="#" class="body2">Cookie siyosati</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-top-image">
+        <img src="@/images/footer-img-2.png" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p class="footer-bottom-item">© <span id="y"></span> NPUU Barcha huquqlar himoyalangan</p>
+      <script>y.textContent = new Date().getFullYear()</script>
+      <a href="https://proend.ru" target="_blank" class="footer-bottom-item ">
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
         Sayt ishlab chiquvchisi:
         <img src="@/images/proend.svg" width="100" alt="">
       </a>
@@ -120,6 +183,7 @@
   </div>
 </footer>
 <script src="@/assets/libs/aos/aos.js"></script>
+<<<<<<< HEAD
 <script src="@/assets/libs/bootstrap/bootstrap.js"></script>
 <script src="@/assets/libs/flatpickr/flatpickr.js"></script>
 <script src="@/assets/js/jquery.js"></script>
@@ -204,11 +268,46 @@
   const eventsCarousel = $('.carousel-section-wrapper');
 
   eventsCarousel.owlCarousel({
+=======
+<!-- <script src="@/assets/libs/bootstrap/bootstrap.min.js"></script> -->
+<!-- <script src="@/assets/libs/flatpickr/flatpickr.min.js"></script> -->
+<script src="@/assets/js/jquery.min.js"></script>
+<script src="@/assets/js/imask.js"></script>
+<!-- <script src="@/assets/js/flatpickr.js"></script> -->
+<script src="@/assets/libs/owl-carousel/owl-carousel.js"></script>
+<script src="@/assets/js/main.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  $(function () {
+    $('.hero-carousel').owlCarousel({
+      loop: true,
+      autoplay: true,
+      autoplaySpeed: 6000,
+      smartSpeed: 6000,
+      autoplayHoverPause: true,
+      slideTransition: 'linear',
+      nav: false,
+      dots: false,
+      margin: 84,
+
+      responsive: {
+        0: { items: 2 },
+        480: { items: 3 },
+        768: { items: 4 },
+        992: { items: 6 },
+        1200: { items: 8 }
+      }
+    });
+  });
+
+  $('.carousel-section-slider').owlCarousel({
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
     loop: true,
     margin: 12,
     nav: false,
     dots: false,
     autoplay: true,
+<<<<<<< HEAD
     autoplayTimeout: 4000,
     autoplaySpeed: 4000,
     autoplayHoverPause: true,
@@ -226,10 +325,35 @@
       576: {
         autoWidth: true,
         items: 1
+=======
+    autoplaySpeed: 6000,
+    smartSpeed: 6000,
+    autoplayHoverPause: true,
+    slideTransition: 'linear',
+
+    responsive: {
+      0: {
+        items: 1,
+        stagePadding: 24
+      },
+      480: {
+        items: 1.3,
+        stagePadding: 20
+      },
+      576: {
+        items: 2
+      },
+      992: {
+        items: 3
+      },
+      1200: {
+        items: 4
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
       }
     }
   });
 
+<<<<<<< HEAD
 
   $('.carousel-prev').on('click', function (e) {
     e.preventDefault();
@@ -267,4 +391,44 @@
     touchDrag: false,
     pullDrag: false
   })
+=======
+  $(document).ready(function () {
+    const $medcardCarousel = $(".medcard-carousel");
+
+    $medcardCarousel.owlCarousel({
+      items: 1,
+      loop: true,
+      margin: 0,
+      nav: false,
+      dots: false,
+
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: true,
+
+      smartSpeed: 900,    
+      fluidSpeed: true,
+      mouseDrag: true,
+      touchDrag: true,
+
+      responsive: {
+        0: { items: 1, autoplayTimeout: 3500 },
+        576: { items: 1, autoplayTimeout: 4000 },
+        992: { items: 1, autoplayTimeout: 4000 },
+        1200: { items: 1, autoplayTimeout: 4500 }
+      }
+    });
+
+    $medcardCarousel.on("changed.owl.carousel", function (event) {
+      const total = event.item.count;
+      let current = event.item.index - event.relatedTarget._clones.length / 2;
+      current = ((current % total) + total) % total; 
+
+      $(".medcard-carousel-progress span")
+        .removeClass("active")
+        .eq(current)
+        .addClass("active");
+    });
+  });
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
 </script>

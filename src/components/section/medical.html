@@ -1,0 +1,157 @@
+<div class="medical" id="medical">
+  <div class="container">
+    <div class="medical-main">
+      <div class="medical-main-content">
+        <div class="medical-main-content-title">
+          <h3 class="headline5">Advokatlar va tashkilotlar uchun ham qulay.</h3>
+          <p class="body2">LAWO orqali mijozlaringizni boshqaring, murojaatlarni qabul qiling va huquqiy
+            xizmatlaringizni raqamlashtiring.</p>
+        </div>
+
+        <div class="medical-main-content-subtitle" id="subtitleList">
+          <div class="medical-main-content-subtitle-item" data-index="0">
+            <h5 class="subtitle5">Advokatlar</h5>
+            <p class="body3">Mijozlar bilan ishlang, yangi murojaatlarni qabul qiling va qabullarni qulay boshqaring.
+            </p>
+            <span class="progress-line"></span>
+          </div>
+          <div class="medical-main-content-subtitle-item" data-index="1">
+            <h5 class="subtitle5">Yuridik tashkilotlar</h5>
+            <p class="body3">Tashkilotingizdagi advokatlar, mijozlar va huquqiy xizmatlarni yagona platformada
+              boshqaring.</p>
+            <span class="progress-line"></span>
+          </div>
+          <div class="medical-main-content-subtitle-item" data-index="2">
+            <h5 class="subtitle5">Huquqiy xizmatlar</h5>
+            <p class="body3">Xizmatlaringizni namoyish qiling, konsultatsiya narxini belgilang va yangi mijozlardan
+              murojaatlar qabul qiling.</p>
+            <span class="progress-line"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="medical-main-box">
+        <img src="@/images/medical-img-1.png" alt="" id="medicalMainImg">
+        <div class="medical-main-box-icon" id="medicalMainIcons">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const DURATION = 4000;
+    const FADE_OUT_TIME = 500;
+
+    const DATA = [
+      {
+        img: '@/images/medical-img-1.png',
+        icons: [
+          { icon: '@/images/hero-img-7.svg', label: 'Profilingizni boshqaring' },
+          { icon: '@/images/hero-img-7.svg', label: 'Mijozlarni boshqarish' },
+          { icon: '@/images/hero-img-7.svg', label: 'Daromad hisoboti' }
+        ]
+      },
+      {
+        img: '@/images/medical-img-1.png',
+        icons: []
+      },
+      {
+        img: '@/images/medical-img-1.png',
+        icons: []
+      }
+    ];
+
+    const items = document.querySelectorAll('#subtitleList .medical-main-content-subtitle-item');
+    const mainImg = document.getElementById('medicalMainImg');
+    const iconBox = document.getElementById('medicalMainIcons');
+
+    let currentIndex = 0;
+    let timer = null;
+
+    function resetProgress() {
+      items.forEach((item) => {
+        item.classList.remove('is-filling');
+        const line = item.querySelector('.progress-line');
+        line.style.animation = 'none';
+        line.style.width = '0';
+      });
+    }
+
+    function renderIcons(index) {
+      const iconsData = DATA[index].icons;
+      const currentIcons = iconBox.querySelectorAll('.medical-main-box-icon-item');
+
+      if (currentIcons.length > 0) {
+        currentIcons.forEach((el) => el.classList.add('icon-fade-out'));
+
+        setTimeout(() => {
+          iconBox.innerHTML = '';
+          if (iconsData && iconsData.length > 0) {
+            insertIcons(iconsData);
+          }
+        }, FADE_OUT_TIME);
+      } else {
+        if (iconsData && iconsData.length > 0) {
+          insertIcons(iconsData);
+        }
+      }
+    }
+
+    function insertIcons(iconsData) {
+      iconBox.innerHTML = iconsData
+        .map(
+          (item) => `
+          <div class="medical-main-box-icon-item">
+            <img src="${item.icon}" alt="">
+            <p class="body7">${item.label}</p>
+          </div>
+        `
+        )
+        .join('');
+
+      void iconBox.offsetWidth;
+    }
+
+    function activateItem(index) {
+      resetProgress();
+
+      const activeItem = items[index];
+      const line = activeItem.querySelector('.progress-line');
+
+      void activeItem.offsetWidth;
+
+      activeItem.style.setProperty('--fill-duration', DURATION / 1000 + 's');
+      activeItem.classList.add('is-filling');
+      line.style.animation = '';
+
+      const newImg = DATA[index].img;
+      mainImg.style.transition = 'opacity 0.4s ease';
+      mainImg.style.opacity = 0;
+
+      setTimeout(() => {
+        mainImg.src = newImg;
+        mainImg.style.opacity = 1;
+        renderIcons(index);
+      }, 400);
+    }
+
+    function nextItem() {
+      activateItem(currentIndex);
+      currentIndex = (currentIndex + 1) % items.length;
+      clearTimeout(timer);
+      timer = setTimeout(nextItem, DURATION);
+    }
+
+    items.forEach((item, i) => {
+      item.addEventListener('click', () => {
+        clearTimeout(timer);
+        currentIndex = i;
+        nextItem();
+      });
+    });
+
+    nextItem();
+  })();
+</script>

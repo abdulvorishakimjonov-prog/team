@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="./assets/libs/owl-carousel/owl-carousel.css">
 <link rel="stylesheet" href="./assets/libs/owl-carousel/owl-theme.css">
 <link rel="stylesheet" href="./css/main.min.css">
+<<<<<<< HEAD
 <title>TEAM</title>
 </head>
 
@@ -329,6 +330,50 @@
       </div>
     </div>
 
+=======
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<title> TOBB ETU </title>
+</head>
+
+<body>
+    <header class="header">
+  <div class="container">
+    <div class="header-main header-top">
+
+      <a href="/" class="header-main-logo">
+
+        <div class="header-main-logo-image">
+          <img src="./images/logo.svg" alt="" class="none">
+          <img src="./images/footer-logo.svg" alt="" class="header-main-logo-bloc">
+        </div>
+
+        <div class="header-main-logo-text">
+          <img src="./images/header-logo.svg" alt="" class="none">
+          <img src="./images/footer-logo-2.svg" alt="" class="header-main-logo-bloc">
+
+          <p>HUQUQLARINGIZ HIMOYASI DOIM SIZ BILAN</p>
+        </div>
+
+      </a>
+      <div class="header-main-content">
+        <a href="/" class="active body5">Bosh sahifa</a>
+        <a href="#about" class="body5">Imkoniyatlar</a>
+        <a href="#medical" class="body5">Advokatlar</a>
+        <a href="#" class="body5">Tashkilotlar</a>
+        <a href="#assistant" class="body5">Lawo AI</a>
+        <a href="#subscription" class="body5">Obunalar</a>
+        <a href="#faq" class="body5">FAQ</a>
+      </div>
+
+      <div class="header-main-download">
+        <a href="#" class="button1">
+          Yuklab olish
+          <i class="i-dowland"></i>
+        </a>
+      </div>
+
+    </div>
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
   </div>
 </header>
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
@@ -411,6 +456,7 @@
     </div>
 </div>
     <div class="breadcrumbs">
+<<<<<<< HEAD
   <div class="container">
     <div class="breadcrumbs-wrapper">
       <p class="headline5 slate900">Academic <span class="red700">Staff</span></p>
@@ -432,6 +478,25 @@
   <div class="breadcrumbs-img">
     <img src="./images/breadcrumb-bg.png" alt="">
   </div>
+=======
+    <div class="container">
+        <div class="breadcrumbs-wrapper">
+            <p class="subtitle1 text-white mb-2">Title</p>
+            <div class="d-flex align-items-center gap-1">
+                <a href="/" class="text-white">
+                    <i class="i-home" style="font-size: 22px;"></i>
+                </a>
+                <i class="i-next" style="font-size: 16px;"></i>
+                <a href="/" class="body3 text-light">
+                    About University
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="breadcrumbs-img">
+        <img src="./images/breadcrumb-bg.png" alt="">
+    </div>
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
 </div>
     <div class="layout">
         <div class="container">
@@ -466,6 +531,7 @@
             <div class="layout-sidebar">
                 <div class="sidebar">
     <div class="sidebar__menu">
+<<<<<<< HEAD
 
         <h3 class="sidebar__title subtitle8">
             About Us
@@ -506,11 +572,44 @@
 
                     <li class="sidebar__dropdown--item">
                         <a href="#" class="sidebar__dropdown--link body3 slate700">
+=======
+        <h3 class="sidebar__title">About</h3>
+        <ul class="sidebar__list">
+            <li class="sidebar__list--item">
+                <a class="sidebar__link body3">
+                    Page1
+                </a>
+            </li>
+            <li class="sidebar__list--item active ">
+                <a class="sidebar__link body2">
+                    Page2
+                </a>
+            </li>
+            <li class="sidebar__list--item has-dropdown">
+                <a href="#" class="sidebar__button body3">
+                    Page with dropdown
+                    <i class="i-dropdown sidebar__icon"></i>
+                </a>
+                <ul class="sidebar__dropdown">
+                    <li class="sidebar__dropdown--item">
+                        <a href="#" class="sidebar__dropdown--link body3">
+                            Subpage 1
+                        </a>
+                    </li>
+                    <li class="sidebar__dropdown--item">
+                        <a href="#" class="sidebar__dropdown--link body3">
+                            Subpage 2
+                        </a>
+                    </li>
+                    <li class="sidebar__dropdown--item">
+                        <a href="#" class="sidebar__dropdown--link body3">
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
                             Subpage 3
                         </a>
                     </li>
                 </ul>
             </li>
+<<<<<<< HEAD
 
             <li class="sidebar__list--item">
                 <a href="#" class="sidebar__link body3 slate700">
@@ -589,6 +688,36 @@
         });
     });
 </script>
+=======
+        </ul>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const dropdownItems = document.querySelectorAll('.sidebar__list--item.has-dropdown');
+
+        dropdownItems.forEach(item => {
+            const button = item.querySelector('.sidebar__button');
+            const dropdown = item.querySelector('.sidebar__dropdown');
+
+            if (button) {
+                button.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    item.classList.toggle('open');
+
+                    dropdownItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('open');
+                        }
+                    });
+                });
+            }
+        });
+    });
+</script>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
             </div>
 
         </div>
@@ -596,6 +725,7 @@
 
 
     <footer class="footer">
+<<<<<<< HEAD
   <div class="container">
     <div class="footer-banner">
       <div class="footer-banner-text">
@@ -710,6 +840,68 @@
       <p class="footer-bottom-item body3 ">Copyright © <span id="y"></span>, Team University</p>
       <script>y.textContent = new Date().getFullYear()</script>
       <a href="https://proend.ru" target="_blank" class="footer-bottom-item body3">
+=======
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-top--item">
+        <div class="footer-top--item-logo">
+          <div class="footer-top--item-logo-image">
+            <div class="footer-top--item-logo-image-icon">
+              <img src="./images/footer-logo.svg" alt="Logo">
+            </div>
+            <div class="footer-top--item-logo-image-text">
+              <img src="./images/footer-logo-2.svg" alt="">
+              <p>HUQUQLARINGIZ HIMOYASI DOIM SIZ BILAN</p>
+            </div>
+          </div>
+          <p class="body2">Huquqiy xizmatlarni bir joyda toping, boshqaring va oling. Lawo — foydalanuvchilar,
+            advokatlar va yuridik tashkilotlarni yagona raqamli platformada birlashtiradi..</p>
+          <div class="footer-top--item-logo-icon">
+            <a href="#"><i class="i-teligram"></i></a>
+            <a href="#"><i class="i-instagram"></i></a>
+            <a href="#"><i class="i-facebook"></i></a>
+            <a href="#"><i class="i-watsap"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-top--item-content">
+          <div class="footer-top--item-content-link">
+            <p class="body1">Platforma</p>
+            <a href="#" class="body2">Advokatlar</a>
+            <a href="#" class="body2">Tashkilotlar</a>
+            <a href="#" class="body2">Hujjatlar shablonlari</a>
+            <a href="#" class="body2">ADVO AI</a>
+            <a href="#" class="body2">Yevroprotokol</a>
+          </div>
+          <div class="footer-top--item-content-link">
+            <p class="body1">Kompaniya</p>
+            <a href="#" class="body2">Biz haqimizda</a>
+            <a href="#" class="body2">Yangiliklar</a>
+            <a href="#" class="body2">Blog</a>
+            <a href="#" class="body2">Hamkorlik</a>
+            <a href="#" class="body2">Ish o’rinlari</a>
+          </div>
+          <div class="footer-top--item-content-link">
+            <p class="body1">Yordam</p>
+            <a href="#" class="body2">Faq</a>
+            <a href="#" class="body2">Aloqa</a>
+            <a href="#" class="body2">Maxfiylik siyosati</a>
+            <a href="#" class="body2">Foydalanish shartlari</a>
+            <a href="#" class="body2">Cookie siyosati</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-top-image">
+        <img src="./images/footer-img-2.png" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p class="footer-bottom-item">© <span id="y"></span> NPUU Barcha huquqlar himoyalangan</p>
+      <script>y.textContent = new Date().getFullYear()</script>
+      <a href="https://proend.ru" target="_blank" class="footer-bottom-item ">
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
         Sayt ishlab chiquvchisi:
         <img src="./images/proend.svg" width="100" alt="">
       </a>
@@ -717,6 +909,7 @@
   </div>
 </footer>
 <script src="./assets/libs/aos/aos.js"></script>
+<<<<<<< HEAD
 <script src="./assets/libs/bootstrap/bootstrap.js"></script>
 <script src="./assets/libs/flatpickr/flatpickr.js"></script>
 <script src="./assets/js/jquery.js"></script>
@@ -801,11 +994,46 @@
   const eventsCarousel = $('.carousel-section-wrapper');
 
   eventsCarousel.owlCarousel({
+=======
+<!-- <script src="./assets/libs/bootstrap/bootstrap.min.js"></script> -->
+<!-- <script src="./assets/libs/flatpickr/flatpickr.min.js"></script> -->
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/imask.js"></script>
+<!-- <script src="./assets/js/flatpickr.js"></script> -->
+<script src="./assets/libs/owl-carousel/owl-carousel.js"></script>
+<script src="./assets/js/main.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  $(function () {
+    $('.hero-carousel').owlCarousel({
+      loop: true,
+      autoplay: true,
+      autoplaySpeed: 6000,
+      smartSpeed: 6000,
+      autoplayHoverPause: true,
+      slideTransition: 'linear',
+      nav: false,
+      dots: false,
+      margin: 84,
+
+      responsive: {
+        0: { items: 2 },
+        480: { items: 3 },
+        768: { items: 4 },
+        992: { items: 6 },
+        1200: { items: 8 }
+      }
+    });
+  });
+
+  $('.carousel-section-slider').owlCarousel({
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
     loop: true,
     margin: 12,
     nav: false,
     dots: false,
     autoplay: true,
+<<<<<<< HEAD
     autoplayTimeout: 4000,
     autoplaySpeed: 4000,
     autoplayHoverPause: true,
@@ -823,10 +1051,35 @@
       576: {
         autoWidth: true,
         items: 1
+=======
+    autoplaySpeed: 6000,
+    smartSpeed: 6000,
+    autoplayHoverPause: true,
+    slideTransition: 'linear',
+
+    responsive: {
+      0: {
+        items: 1,
+        stagePadding: 24
+      },
+      480: {
+        items: 1.3,
+        stagePadding: 20
+      },
+      576: {
+        items: 2
+      },
+      992: {
+        items: 3
+      },
+      1200: {
+        items: 4
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
       }
     }
   });
 
+<<<<<<< HEAD
 
   $('.carousel-prev').on('click', function (e) {
     e.preventDefault();
@@ -864,6 +1117,46 @@
     touchDrag: false,
     pullDrag: false
   })
+=======
+  $(document).ready(function () {
+    const $medcardCarousel = $(".medcard-carousel");
+
+    $medcardCarousel.owlCarousel({
+      items: 1,
+      loop: true,
+      margin: 0,
+      nav: false,
+      dots: false,
+
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: true,
+
+      smartSpeed: 900,    
+      fluidSpeed: true,
+      mouseDrag: true,
+      touchDrag: true,
+
+      responsive: {
+        0: { items: 1, autoplayTimeout: 3500 },
+        576: { items: 1, autoplayTimeout: 4000 },
+        992: { items: 1, autoplayTimeout: 4000 },
+        1200: { items: 1, autoplayTimeout: 4500 }
+      }
+    });
+
+    $medcardCarousel.on("changed.owl.carousel", function (event) {
+      const total = event.item.count;
+      let current = event.item.index - event.relatedTarget._clones.length / 2;
+      current = ((current % total) + total) % total; 
+
+      $(".medcard-carousel-progress span")
+        .removeClass("active")
+        .eq(current)
+        .addClass("active");
+    });
+  });
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
 </script>
 
 </body>

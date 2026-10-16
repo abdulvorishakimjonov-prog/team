@@ -7,7 +7,11 @@
    version="1.1"
    id="svg3"
    sodipodi:docname="menu.svg"
+<<<<<<< HEAD
    inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+=======
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -27,12 +31,17 @@
      inkscape:cx="12"
      inkscape:cy="12"
      inkscape:window-width="1920"
+<<<<<<< HEAD
      inkscape:window-height="1009"
+=======
+     inkscape:window-height="1057"
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg3" />
   <path
+<<<<<<< HEAD
      style="baseline-shift:baseline;display:inline;overflow:visible;vector-effect:none;fill:#334155;stroke-linecap:round;stroke-linejoin:round;enable-background:accumulate;stop-color:#000000;stop-opacity:1;opacity:1"
      d="M 4,4.25 A 0.75,0.75 0 0 0 3.25,5 0.75,0.75 0 0 0 4,5.75 H 20 A 0.75,0.75 0 0 0 20.75,5 0.75,0.75 0 0 0 20,4.25 Z"
      id="path1" />
@@ -42,6 +51,17 @@
      id="path2" />
   <path
      style="baseline-shift:baseline;display:inline;overflow:visible;vector-effect:none;fill:#334155;stroke-linecap:round;stroke-linejoin:round;enable-background:accumulate;stop-color:#000000;stop-opacity:1;opacity:1"
+=======
+     style="baseline-shift:baseline;display:inline;overflow:visible;vector-effect:none;fill:#483737;stroke-linecap:round;stroke-linejoin:round;enable-background:accumulate;stop-color:#000000;stop-opacity:1;opacity:1"
+     d="M 4,4.25 A 0.75,0.75 0 0 0 3.25,5 0.75,0.75 0 0 0 4,5.75 H 20 A 0.75,0.75 0 0 0 20.75,5 0.75,0.75 0 0 0 20,4.25 Z"
+     id="path1" />
+  <path
+     style="baseline-shift:baseline;display:inline;overflow:visible;vector-effect:none;fill:#483737;stroke-linecap:round;stroke-linejoin:round;enable-background:accumulate;stop-color:#000000;stop-opacity:1;opacity:1"
+     d="M 4,11.25 A 0.75,0.75 0 0 0 3.25,12 0.75,0.75 0 0 0 4,12.75 H 20 A 0.75,0.75 0 0 0 20.75,12 0.75,0.75 0 0 0 20,11.25 Z"
+     id="path2" />
+  <path
+     style="baseline-shift:baseline;display:inline;overflow:visible;vector-effect:none;fill:#483737;stroke-linecap:round;stroke-linejoin:round;enable-background:accumulate;stop-color:#000000;stop-opacity:1;opacity:1"
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
      d="M 4,18.25 A 0.75,0.75 0 0 0 3.25,19 0.75,0.75 0 0 0 4,19.75 H 20 A 0.75,0.75 0 0 0 20.75,19 0.75,0.75 0 0 0 20,18.25 Z"
      id="path3" />
 </svg>

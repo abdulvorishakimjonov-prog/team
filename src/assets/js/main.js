@@ -292,6 +292,7 @@ function initPhoneMask() {
 
 
 
+<<<<<<< HEAD
 function initHeroLangDropdown() {
     const dropdowns = document.querySelectorAll('.hero-lang')
 
@@ -343,13 +344,18 @@ function initHeroLangDropdown() {
     })
 }
 
+=======
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
 function initAppOnContentLoaded() {
     initCounterAnimation()
     initTabSwitching()
     initFaqs()
     initAos()
     initPhoneMask()
+<<<<<<< HEAD
     initHeroLangDropdown()
+=======
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
 }
 
 function initAppOnFullLoad() {

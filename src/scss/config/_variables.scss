@@ -13,6 +13,7 @@
     --gray900: #111827;
     --gray950: #030712;
 
+<<<<<<< HEAD
     --slate50: #F8FAFC;
     --slate100: #F1F5F9;
     --slate200: #E2E8F0;
@@ -24,6 +25,8 @@
     --slate800: #1E293B;
     --slate900: #0F172A;
     --slate950: #020617;
+=======
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
 
     --emerald50: #ECFDF5;
     --emerald100: #D1FAE5;
@@ -170,8 +173,13 @@
     --red950: #450A0A;
 
 
+<<<<<<< HEAD
     --height-header: 90px;
     --width-sidebar: 270px;
+=======
+    --height-header: 145px;
+    --width-sidebar: 300px;
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
     --width-container: 1600px;
 
     @include devices(lg) {
@@ -184,6 +192,7 @@
     }
 }
 
+<<<<<<< HEAD
 .gray50 {
     color: var(--gray50);
 }
@@ -798,4 +807,109 @@
 
 .red950 {
     color: var(--red950);
+=======
+.black1 {
+    color: var(--black1);
+}
+
+.black2 {
+    color: var(--black2);
+}
+
+.black3 {
+    color: var(--black3);
+}
+
+.black4 {
+    color: var(--black4);
+}
+
+.black5 {
+    color: var(--black5);
+}
+
+.black6 {
+    color: var(--black6);
+}
+
+.black7 {
+    color: var(--black7);
+}
+
+.black8 {
+    color: var(--black8);
+}
+
+.blue1 {
+    color: var(--blue1);
+}
+
+.blue2 {
+    color: var(--blue2);
+}
+
+.blue3 {
+    color: var(--blue3);
+}
+
+.blue4 {
+    color: var(--blue4);
+}
+
+.blue5 {
+    color: var(--blue5);
+}
+
+.blue6 {
+    color: var(--blue6);
+}
+
+.blue7 {
+    color: var(--blue7);
+}
+
+.blue8 {
+    color: var(--blue8);
+    background: var(--bluegradient);
+}
+
+.red1 {
+    color: var(--red1);
+}
+
+.red2 {
+    color: var(--red2);
+}
+
+.red3 {
+    color: var(--red3);
+}
+
+.red4 {
+    color: var(--red4);
+}
+
+.red5 {
+    color: var(--red5);
+}
+
+.red6 {
+    color: var(--red6);
+}
+
+.orange1 {
+    color: var(--orange1);
+}
+
+.orange2 {
+    color: var(--orange2);
+}
+
+.orange3 {
+    color: var(--orange3);
+}
+
+.orange4 {
+    color: var(--orange4);
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
 }

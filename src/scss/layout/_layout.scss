@@ -21,7 +21,10 @@
         width: var(--width-sidebar);
         position: relative;
         flex: 0 0 auto;
+<<<<<<< HEAD
         margin-bottom: 256px;
+=======
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
 
         @media(max-width:992px) {
             margin: 0;
@@ -34,7 +37,10 @@
         flex-direction: column;
         flex: 1 1 auto;
         max-width: calc(100% - var(--width-sidebar) - 16px);
+<<<<<<< HEAD
         margin-bottom: 256px;
+=======
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
 
         @media(max-width:992px) {
             margin-bottom: 20px;

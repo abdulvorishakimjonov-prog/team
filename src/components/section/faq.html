@@ -1,0 +1,138 @@
+<div class="contact-faq" id="faq">
+    <div class="container">
+        <div class="contact-faq-wrapper">
+
+            <div class="contact-form">
+                <div class="contact-form-text">
+                    <h2 class="headline5">LAWO bilan hamkorlikni boshlang</h2>
+                    <p class="body3">Advokat sifatida LAWO platformasiga qo‘shiling yoki hamkorlik taklifingizni
+                        yuboring. Ma’lumotlaringizni qoldiring — jamoamiz siz bilan bog‘lanadi.</p>
+                </div>
+
+                <form class="contact-form-fields">
+                    <div class="contact-form-row">
+                        <div class="contact-form-group">
+                            <label class="body5">Ism va familiya <span>*</span></label>
+                            <input type="text" placeholder="Ism Familiya Otangizning ismi" required>
+                        </div>
+                        <div class="contact-form-group">
+                            <label class="body5">Telefon raqami <span>*</span></label>
+                            <input type="tel" placeholder="+998 __ ___ __ __" required>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-row">
+                        <div class="contact-form-group">
+                            <label class="body5">Elektron pochta</label>
+                            <input type="email" placeholder="example@mail.com">
+                        </div>
+                        <div class="contact-form-group">
+                            <label class="body5">Hamkorlik turi <span>*</span></label>
+                            <div class="contact-form-select">
+                                <select required>
+                                    <option value="" disabled selected>Hamkorlik turini tanlang</option>
+                                    <option value="lawyer">Advokat</option>
+                                    <option value="organization">Yuridik tashkilot</option>
+                                    <option value="partner">Hamkor</option>
+                                </select>
+                                <i class="i-chevron-down"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-group contact-form-group--full">
+                        <label class="body5">Izoh</label>
+                        <textarea rows="4" placeholder="Qisqacha izoh qoldiring"></textarea>
+                    </div>
+
+                    <button type="submit" class="contact-form-submit button1">
+                        Ariza yuborish
+                        <i class="i-teligram"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="faq">
+                <div class="faq-text">
+                    <h2 class="headline5">Ko'p so'raladigan savollar.</h2>
+                </div>
+
+                <div class="faq-item active">
+                    <div class="question subtitle5">
+                        LAWO nima?
+                        <i class="i-dropdown"></i>
+                    </div>
+                    <div class="answer body3">
+                        LAWO — huquqiy xizmatlarni bir joyda jamlagan raqamli platforma. Unda advokat topish, yuridik
+                        xizmatlardan foydalanish va huquqiy masalalarni boshqarish mumkin.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="question subtitle5">
+                        LAWO’dan foydalanish bepulmi?
+                        <i class="i-dropdown"></i>
+                    </div>
+                    <div class="answer body3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="question subtitle5">
+                        Qanday qilib advokat topaman?
+                        <i class="i-dropdown"></i>
+                    </div>
+                    <div class="answer body3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="question subtitle5">
+                        Advokat sifatida ADVO’ga qanday qo‘shilaman?
+                        <i class="i-dropdown"></i>
+                    </div>
+                    <div class="answer body3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="question subtitle5">
+                        LAWO AI qanday ishlaydi?
+                        <i class="i-dropdown"></i>
+                    </div>
+                    <div class="answer body3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="question subtitle5">
+                        LAWO AI qanday ishlaydi?
+                        <i class="i-dropdown"></i>
+                    </div>
+                    <div class="answer body3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+</script>

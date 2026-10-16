@@ -1,4 +1,5 @@
 @font-face {
+<<<<<<< HEAD
   font-family: 'MazzardH';
   src: url('./MazzardH-Light.otf') format('opentype');
   font-weight: 300;
@@ -100,4 +101,11 @@
   font-weight: 900;
   font-style: italic;
   font-display: swap;
+=======
+    font-family: plus-jakarta;
+    src: url('plus-jakartaa.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
 }

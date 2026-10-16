@@ -1,0 +1,450 @@
+@use '../config/mixins' as *;
+
+.features {
+  background: #EFF6FF;
+  position: relative;
+  padding: 100px 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  &::before {
+    top: 0;
+
+    background: linear-gradient(180deg,
+        #FFFFFF 0%,
+        rgba(255, 255, 255, 0) 100%);
+  }
+
+  &::after {
+    bottom: 0;
+
+    background: linear-gradient(0deg,
+        #FFFFFF 0%,
+        rgba(255, 255, 255, 0) 100%);
+  }
+
+  >* {
+    position: relative;
+    z-index: 1;
+  }
+
+  &-main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    gap: 30px;
+
+    @include devices(lg) {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+
+    @include devices(md) {
+      gap: 40px;
+    }
+
+    @include devices(sm) {
+      gap: 30px;
+    }
+  }
+
+  &-info {
+    position: relative;
+    align-self: start;
+
+    p {
+      color: #475569;
+    }
+
+    &-wrapper {
+      position: sticky;
+      top: var(--info-sticky-offset, 120px);
+
+      display: flex;
+      flex-direction: column;
+      gap: 116px;
+
+      @include devices(lg) {
+        position: static;
+        top: auto;
+        gap: 50px;
+      }
+
+      @include devices(md) {
+        margin-bottom: 50px;
+        gap: 35px;
+      }
+
+      @include devices(sm) {
+        gap: 25px;
+      }
+    }
+
+    &-title {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 100px;
+      max-width: 657px;
+
+      @include devices(md) {
+        margin-bottom: 50px;
+      }
+
+      h5 {
+        color: #0F172A;
+
+        span {
+          color: #2B7FFF;
+        }
+
+        @include devices(md) {
+          font-size: 35px;
+        }
+
+        @include devices(sm) {
+          font-size: 28px;
+        }
+      }
+
+      p {
+        @include devices(md) {
+          font-size: 18px;
+        }
+
+        @include devices(sm) {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &-link {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      &-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        &-avatars {
+          display: flex;
+          align-items: center;
+
+          .avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            margin-left: -14px;
+            transition: margin-left 0.3s ease;
+
+            &:first-child {
+              margin-left: 0;
+            }
+
+            @include devices(md) {
+              width: 38px;
+              height: 38px;
+              margin-left: -12px;
+
+              &:first-child {
+                margin-left: 0;
+              }
+            }
+
+            @include devices(sm) {
+              width: 32px;
+              height: 32px;
+              margin-left: -10px;
+
+              &:first-child {
+                margin-left: 0;
+              }
+            }
+          }
+
+          &:hover .avatar {
+            margin-left: 4px;
+
+            &:first-child {
+              margin-left: 0;
+            }
+          }
+        }
+
+        button {
+          background: linear-gradient(180deg,
+              #69AFFF 0%,
+              #1C8AFF 100%);
+
+          border-radius: 42px;
+          padding: 7px 10px;
+
+          color: white;
+
+          @include devices(sm) {
+            padding: 6px 9px;
+          }
+        }
+      }
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include devices(md) {
+      gap: 24px;
+    }
+
+    @include devices(sm) {
+      gap: 20px;
+    }
+
+    &-card {
+      background: #FFFFFF;
+      border-radius: 32px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      height: 336px;
+      justify-content: space-between;
+      overflow: hidden;
+
+      @include devices(lg) {
+        height: 300px;
+      }
+
+      @include devices(md) {
+        height: 280px;
+      }
+
+      @include devices(sm) {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+
+      &-image {
+        padding: 30px 0 0 30px;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+
+        @include devices(md) {
+          padding: 24px 0 0 24px;
+        }
+
+        @include devices(sm) {
+          padding: 20px 20px 0;
+          justify-content: center;
+          height: auto;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 45%;
+          background: linear-gradient(180deg,
+              rgba(255, 255, 255, 0) 0%,
+              #FFFFFF 100%);
+          pointer-events: none;
+          border-radius: 32px;
+
+          @include devices(md) {
+            height: 40%;
+          }
+
+          @include devices(sm) {
+            height: 35%;
+            border-radius: 22px;
+          }
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          max-height: 100%;
+          object-fit: contain;
+          object-position: left bottom;
+
+          @include devices(sm) {
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+          }
+        }
+      }
+
+      &-image2 {
+        padding: 30px 30px 0;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        @include devices(md) {
+          padding: 24px 24px 0;
+        }
+
+        @include devices(sm) {
+          padding: 20px 20px 0;
+          height: auto;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 45%;
+          background: linear-gradient(180deg,
+              rgba(255, 255, 255, 0) 0%,
+              #FFFFFF 100%);
+          pointer-events: none;
+
+          @include devices(md) {
+            height: 40%;
+          }
+
+          @include devices(sm) {
+            height: 35%;
+          }
+        }
+
+        img {
+          width: auto;
+          height: 100%;
+          max-height: 100%;
+          object-fit: contain;
+
+          @include devices(sm) {
+            width: 100%;
+            max-width: 240px;
+            height: auto;
+          }
+        }
+      }
+
+      &-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px;
+        height: 100%;
+
+        @include devices(md) {
+          padding: 24px;
+        }
+
+        @include devices(sm) {
+          height: auto;
+          gap: 16px;
+          padding: 20px;
+          align-items: center;
+          text-align: center;
+        }
+
+        &-icon {
+          width: 54px;
+          height: 54px;
+          overflow: hidden;
+          padding: 11px;
+          background: #DBEAFE;
+          border-radius: 64px;
+          flex-shrink: 0;
+
+          @include devices(md) {
+            width: 48px;
+            height: 48px;
+            padding: 9px;
+          }
+
+          @include devices(sm) {
+            width: 44px;
+            height: 44px;
+            padding: 8px;
+            margin: 0 auto;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        &-text {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+
+          @include devices(sm) {
+            align-items: center;
+          }
+
+          h5 {
+            @include devices(sm) {
+              font-size: 20px;
+            }
+          }
+
+          p {
+            color: #475569;
+
+            @include devices(sm) {
+              font-size: 16px;
+              max-width: 280px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include devices(lg) {
+    padding: 80px 0;
+  }
+
+  @include devices(md) {
+    padding: 60px 0;
+
+    &::before,
+    &::after {
+      height: 90px;
+    }
+  }
+
+  @include devices(sm) {
+    padding: 40px 0;
+
+    &::before,
+    &::after {
+      height: 60px;
+    }
+  }
+}

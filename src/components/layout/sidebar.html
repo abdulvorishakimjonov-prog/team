@@ -1,5 +1,6 @@
 <div class="sidebar">
     <div class="sidebar__menu">
+<<<<<<< HEAD
 
         <h3 class="sidebar__title subtitle8">
             About Us
@@ -40,11 +41,44 @@
 
                     <li class="sidebar__dropdown--item">
                         <a href="#" class="sidebar__dropdown--link body3 slate700">
+=======
+        <h3 class="sidebar__title">About</h3>
+        <ul class="sidebar__list">
+            <li class="sidebar__list--item">
+                <a class="sidebar__link body3">
+                    Page1
+                </a>
+            </li>
+            <li class="sidebar__list--item active ">
+                <a class="sidebar__link body2">
+                    Page2
+                </a>
+            </li>
+            <li class="sidebar__list--item has-dropdown">
+                <a href="#" class="sidebar__button body3">
+                    Page with dropdown
+                    <i class="i-dropdown sidebar__icon"></i>
+                </a>
+                <ul class="sidebar__dropdown">
+                    <li class="sidebar__dropdown--item">
+                        <a href="#" class="sidebar__dropdown--link body3">
+                            Subpage 1
+                        </a>
+                    </li>
+                    <li class="sidebar__dropdown--item">
+                        <a href="#" class="sidebar__dropdown--link body3">
+                            Subpage 2
+                        </a>
+                    </li>
+                    <li class="sidebar__dropdown--item">
+                        <a href="#" class="sidebar__dropdown--link body3">
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
                             Subpage 3
                         </a>
                     </li>
                 </ul>
             </li>
+<<<<<<< HEAD
 
             <li class="sidebar__list--item">
                 <a href="#" class="sidebar__link body3 slate700">
@@ -123,3 +157,33 @@
         });
     });
 </script>
+=======
+        </ul>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const dropdownItems = document.querySelectorAll('.sidebar__list--item.has-dropdown');
+
+        dropdownItems.forEach(item => {
+            const button = item.querySelector('.sidebar__button');
+            const dropdown = item.querySelector('.sidebar__dropdown');
+
+            if (button) {
+                button.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    item.classList.toggle('open');
+
+                    dropdownItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('open');
+                        }
+                    });
+                });
+            }
+        });
+    });
+</script>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+>>>>>>> c12ca8534298f654cb8c8a961d97f2057052f9ef
